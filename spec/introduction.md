@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8666f0fc13e24bd4c0499df77ab887a293c80cf4
+ms.sourcegitcommit: a245de0ce53abe0d77f61bbc3ed30b0bb64cec9a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56306647"
+---
 # <a name="introduction"></a>介绍
 
 C#（读作“See Sharp”）是一种简单易用的新式编程语言，不仅面向对象，还类型安全。 C# 起源于 C 语言系列，将立即为 C、 c + + 和 Java 编程人员所熟悉。 C# 的标准化为 ECMA international ***ECMA-334***标准和通过为 ISO/IEC ***ISO/IEC 23270***标准。 Microsoft 的 C# 编译器为.NET Framework 是一致的这两个这些标准实现。
@@ -1623,4 +1631,4 @@ class Test
     }
 }
 ```
-通过反射请求获得特定特性时，将调用特性类的构造函数（由程序源提供信息），并返回生成的特性实例。 如果是通过属性提供其他信息，那么在特性实例返回前，这些属性会设置为给定值。
+通过反射请求获得特定特性时，将调用特性类的构造函数（由程序源提供信息），并返回生成的特性实例。 如果通过属性提供的其他信息，这些属性设置为给定的值之前返回的属性实例。这是测试
