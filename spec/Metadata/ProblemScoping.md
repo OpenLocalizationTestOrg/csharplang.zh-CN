@@ -3,7 +3,7 @@ ms.openlocfilehash: 9e09fea1b050d4c81afa91b6d3345847f0496805
 ms.sourcegitcommit: 55811c551095ea9ab89baf1144ac0cf7fb1c5df8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
+ms.lasthandoff: 03/05/2019
 ms.locfileid: "57253856"
 ---
 <properties
@@ -18,7 +18,7 @@ productPesIds="16072"
 cloudEnvironments="public"
 schemaVersion="1"
 />
-# <a name="ssl"></a><span data-ttu-id="9922c-103">SSL</span><span class="sxs-lookup"><span data-stu-id="9922c-103">SSL</span></span>
+# <a name="ssl"></a><span data-ttu-id="4f9fb-103">SSL</span><span class="sxs-lookup"><span data-stu-id="4f9fb-103">SSL</span></span>
 ---
 {
     "resourceRequired": false,
