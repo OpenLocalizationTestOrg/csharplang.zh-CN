@@ -1,28 +1,20 @@
----
-ms.openlocfilehash: 8666f0fc13e24bd4c0499df77ab887a293c80cf4
-ms.sourcegitcommit: a245de0ce53abe0d77f61bbc3ed30b0bb64cec9a
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56306647"
----
-# <a name="introduction"></a>介绍
+# <a name="introduction---test"></a>这是一个测试
 
-C#（读作“See Sharp”）是一种简单易用的新式编程语言，不仅面向对象，还类型安全。 C# 起源于 C 语言系列，将立即为 C、 c + + 和 Java 编程人员所熟悉。 C# 的标准化为 ECMA international ***ECMA-334***标准和通过为 ISO/IEC ***ISO/IEC 23270***标准。 Microsoft 的 C# 编译器为.NET Framework 是一致的这两个这些标准实现。
+C# (pronounced "See Sharp") is a simple, modern, object-oriented, and type-safe programming language. C# has its roots in the C family of languages and will be immediately familiar to C, C++, and Java programmers. C# is standardized by ECMA International as the ***ECMA-334*** standard and by ISO/IEC as the ***ISO/IEC 23270*** standard. Microsoft's C# compiler for the .NET Framework is a conforming implementation of both of these standards.
 
-C# 是一种面向对象的语言。不仅如此，C# 还进一步支持***面向组件的***编程。 当代软件设计越来越依赖采用自描述的独立功能包形式的软件组件。 此类组件的关键特征包括：为编程模型提供属性、方法和事件；包含提供组件声明性信息的特性；包含自己的文档。 C# 提供语言构造来直接支持这些概念，使 C# 中用于创建和使用软件组件非常自然的语言。
+C# is an object-oriented language, but C# further includes support for ***component-oriented*** programming. Contemporary software design increasingly relies on software components in the form of self-contained and self-describing packages of functionality. Key to such components is that they present a programming model with properties, methods, and events; they have attributes that provide declarative information about the component; and they incorporate their own documentation. C# provides language constructs to directly support these concepts, making C# a very natural language in which to create and use software components.
 
-多个C#功能的可靠且持久应用程序构造中的帮助：***垃圾回收***自动回收未使用的对象; 占用的内存***异常处理***提供了错误检测和恢复; 的结构化和可扩展方法并***类型安全***语言的设计使它无法读取未初始化的变量，索引超出其边界或执行未选中状态的数组类型强制转换。
+Several C# features aid in the construction of robust and durable applications: ***Garbage collection*** automatically reclaims memory occupied by unused objects; ***exception handling*** provides a structured and extensible approach to error detection and recovery; and the ***type-safe*** design of the language makes it impossible to read from uninitialized variables, to index arrays beyond their bounds, or to perform unchecked type casts.
 
-C# 采用***统一的类型系统***。 所有 C# 类型（包括 `int` 和 `double` 等基元类型）均继承自一个根 `object` 类型。 因此，所有类型共用一组通用运算，任何类型的值都可以一致地进行存储、传输和处理。 此外，C# 还支持用户定义的引用类型和值类型，从而支持对象动态分配以及轻量级结构的内嵌式存储。
+C# has a ***unified type system***. All C# types, including primitive types such as `int` and `double`, inherit from a single root `object` type. Thus, all types share a set of common operations, and values of any type can be stored, transported, and operated upon in a consistent manner. Furthermore, C# supports both user-defined reference types and value types, allowing dynamic allocation of objects as well as in-line storage of lightweight structures.
 
-若要确保，C# 程序和库可以改进随着时间的推移以兼容的方式，更强调上***版本控制***在 C# 的设计。 许多编程语言很少关注这个问题，因此，当引入新版依赖库时，用这些语言编写的程序会出现更多不必要的中断现象。 直接受版本控制考虑事项的 C# 设计方面包括单独`virtual`和`override`修饰符、 关于方法重载决策规则和显式接口成员声明的支持。
+To ensure that C# programs and libraries can evolve over time in a compatible manner, much emphasis has been placed on ***versioning*** in C#'s design. Many programming languages pay little attention to this issue, and, as a result, programs written in those languages break more often than necessary when newer versions of dependent libraries are introduced. Aspects of C#'s design that were directly influenced by versioning considerations include the separate `virtual` and `override` modifiers, the rules for method overload resolution, and support for explicit interface member declarations.
 
-本章的其余部分介绍 C# 语言的基本功能。 尽管更高版本的章节介绍了面向详细信息的且有时数学的方式的规则和例外，这一章致力于清晰和简洁起见，但要牺牲完整性的考虑。 目的是介绍如何将有助于开始编写程序的写入和读取后面的章节的语言提供读取器。
+The rest of this chapter describes the essential features of the C# language. Although later chapters describe rules and exceptions in a detail-oriented and sometimes mathematical manner, this chapter strives for clarity and brevity at the expense of completeness. The intent is to provide the reader with an introduction to the language that will facilitate the writing of early programs and the reading of later chapters.
 
 ## <a name="hello-world"></a>Hello world
 
-“Hello, World”程序历来都用于介绍编程语言。 下面展示了此程序的 C# 代码：
+The "Hello, World" program is traditionally used to introduce a programming language. Here it is in C#:
 
 ```csharp
 using System;
@@ -35,26 +27,26 @@ class Hello
 }
 ```
 
-C# 源文件的文件扩展名通常为 `.cs`。 假设"Hello，World"程序存储在文件`hello.cs`，可以使用 Microsoft C# 编译器使用命令行编译该程序
+C# source files typically have the file extension `.cs`. Assuming that the "Hello, World" program is stored in the file `hello.cs`, the program can be compiled with the Microsoft C# compiler using the command line
 ```
 csc hello.cs
 ```
-这会生成名为可执行程序集`hello.exe`。 此应用程序运行时生成的输出是
+which produces an executable assembly named `hello.exe`. The output produced by this application when it is run is
 ```
 Hello, World
 ```
 
-“Hello, World”程序始于引用 `System` 命名空间的 `using` 指令。 命名空间提供了一种用于组织 C# 程序和库的分层方法。 命名空间包含类型和其他命名空间。例如，`System` 命名空间包含许多类型（如程序中引用的 `Console` 类）和其他许多命名空间（如 `IO` 和 `Collections`）。 借助引用给定命名空间的 `using` 指令，可以非限定的方式使用作为相应命名空间成员的类型。 由于使用 `using` 指令，因此程序可以使用 `Console.WriteLine` 作为 `System.Console.WriteLine` 的简写。
+The "Hello, World" program starts with a `using` directive that references the `System` namespace. Namespaces provide a hierarchical means of organizing C# programs and libraries. Namespaces contain types and other namespaces—for example, the `System` namespace contains a number of types, such as the `Console` class referenced in the program, and a number of other namespaces, such as `IO` and `Collections`. A `using` directive that references a given namespace enables unqualified use of the types that are members of that namespace. Because of the `using` directive, the program can use `Console.WriteLine` as shorthand for `System.Console.WriteLine`.
 
-“Hello, World”程序声明的 `Hello` 类只有一个成员，即 `Main` 方法。 `Main`方法声明具有`static`修饰符。 实例方法可以使用关键字 `this` 引用特定的封闭对象实例，而静态方法则可以在不引用特定对象的情况下运行。 按照约定，`Main` 静态方法是程序的入口点。
+The `Hello` class declared by the "Hello, World" program has a single member, the method named `Main`. The `Main` method is declared with the `static` modifier. While instance methods can reference a particular enclosing object instance using the keyword `this`, static methods operate without reference to a particular object. By convention, a static method named `Main` serves as the entry point of a program.
 
-程序的输出是由 `System` 命名空间中 `Console` 类的 `WriteLine` 方法生成。 此类提供的.NET Framework 类库，其中，默认情况下，将自动引用由 Microsoft C# 编译器。 请注意，C# 语言本身没有单独的运行时库。 相反，.NET Framework 是运行时库的 C#。
+The output of the program is produced by the `WriteLine` method of the `Console` class in the `System` namespace. This class is provided by the .NET Framework class libraries, which, by default, are automatically referenced by the Microsoft C# compiler. Note that C# itself does not have a separate runtime library. Instead, the .NET Framework is the runtime library of C#.
 
-## <a name="program-structure"></a>程序结构
+## <a name="program-structure"></a>Program structure
 
-C# 中的关键组织结构概念包括***程序***、***命名空间***、***类型***、***成员***和***程序集***。 C# 程序由一个或多个源文件组成。 程序声明类型，而类型则包含成员，并被整理到命名空间中。 类型示例包括类和接口。 成员示例包括字段、方法、属性和事件。 编译完的 C# 程序实际上会打包到程序集中。 程序集通常具有文件扩展名`.exe`或`.dll`，取决于它们的实现是否***应用程序***或***库***。
+The key organizational concepts in C# are ***programs***, ***namespaces***, ***types***, ***members***, and ***assemblies***. C# programs consist of one or more source files. Programs declare types, which contain members and can be organized into namespaces. Classes and interfaces are examples of types. Fields, methods, properties, and events are examples of members. When C# programs are compiled, they are physically packaged into assemblies. Assemblies typically have the file extension `.exe` or `.dll`, depending on whether they implement ***applications*** or ***libraries***.
 
-该示例
+The example
 
 ```csharp
 using System;
@@ -89,16 +81,16 @@ namespace Acme.Collections
     }
 }
 ```
-声明一个名为类`Stack`调用的命名空间中`Acme.Collections`。 此类的完全限定的名称为 `Acme.Collections.Stack`。 此类包含多个成员：一个 `top` 字段、两个方法（`Push` 和 `Pop`）和一个 `Entry` 嵌套类。 `Entry` 类还包含三个成员：一个 `next` 字段、一个 `data` 字段和一个构造函数。 假定示例的源代码存储在 `acme.cs` 文件中，以下命令行
+declares a class named `Stack` in a namespace called `Acme.Collections`. The fully qualified name of this class is `Acme.Collections.Stack`. The class contains several members: a field named `top`, two methods named `Push` and `Pop`, and a nested class named `Entry`. The `Entry` class further contains three members: a field named `next`, a field named `data`, and a constructor. Assuming that the source code of the example is stored in the file `acme.cs`, the command line
 
 ```
 csc /t:library acme.cs
 ```
-将示例编译成库（不含 `Main` 入口点的代码），并生成 `acme.dll` 程序集。
+compiles the example as a library (code without a `Main` entry point) and produces an assembly named `acme.dll`.
 
-程序集包含可执行代码中的窗体***中间语言***(IL) 指令和符号化信息的形式***元数据***。 执行前，程序集中的 IL 代码会被 .NET 公共语言运行时的实时 (JIT) 编译器自动转换成处理器专属代码。
+Assemblies contain executable code in the form of ***Intermediate Language*** (IL) instructions, and symbolic information in the form of ***metadata***. Before it is executed, the IL code in an assembly is automatically converted to processor-specific code by the Just-In-Time (JIT) compiler of .NET Common Language Runtime.
 
-由于程序集是包含代码和元数据的自描述功能单元，因此无需在 C# 中使用 `#include` 指令和头文件。 只需在编译程序时引用特定的程序集，即可在 C# 程序中使用此程序集中包含的公共类型和成员。 例如，此程序使用 `acme.dll` 程序集中的 `Acme.Collections.Stack` 类：
+Because an assembly is a self-describing unit of functionality containing both code and metadata, there is no need for `#include` directives and header files in C#. The public types and members contained in a particular assembly are made available in a C# program simply by referencing that assembly when compiling the program. For example, this program uses the `Acme.Collections.Stack` class from the `acme.dll` assembly:
 
 ```csharp
 using System;
@@ -117,92 +109,92 @@ class Test
     }
 }
 ```
-如果程序存储在文件`test.cs`，当`test.cs`进行编译`acme.dll`可以使用编译器的引用程序集`/r`选项：
+If the program is stored in the file `test.cs`, when `test.cs` is compiled, the `acme.dll` assembly can be referenced using the compiler's `/r` option:
 
 ```
 csc /r:acme.dll test.cs
 ```
-这会创建 `test.exe` 可执行程序集，它将在运行时输出以下内容：
+This creates an executable assembly named `test.exe`, which, when run, produces the output:
 
 ```
 100
 10
 1
 ```
-使用 C#，可以将程序的源文本存储在多个源文件中。 编译多文件 C# 程序时，可以将所有源文件一起处理，并且源文件可以随意相互引用。从概念上讲，就像是所有源文件在处理前被集中到一个大文件中一样。 在 C# 中，永远都不需要使用前向声明，因为声明顺序无关紧要（除了极少数的例外情况）。 C# 并不限制源文件只能声明一种公共类型，也不要求源文件的文件名必须与其中声明的类型相匹配。
+C# permits the source text of a program to be stored in several source files. When a multi-file C# program is compiled, all of the source files are processed together, and the source files can freely reference each other—conceptually, it is as if all the source files were concatenated into one large file before being processed. Forward declarations are never needed in C# because, with very few exceptions, declaration order is insignificant. C# does not limit a source file to declaring only one public type nor does it require the name of the source file to match a type declared in the source file.
 
-## <a name="types-and-variables"></a>类型和变量
+## <a name="types-and-variables"></a>Types and variables
 
-C# 有两种类型：***值类型***和***引用类型***。 值类型的变量直接包含数据，而引用类型的变量则存储对数据（称为“对象”）的引用。 对于引用类型，两个变量可以引用同一对象；因此，对一个变量执行的运算可能会影响另一个变量引用的对象。 借助值类型，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量（`ref` 和 `out` 参数变量除外）。
+There are two kinds of types in C#: ***value types*** and ***reference types***. Variables of value types directly contain their data whereas variables of reference types store references to their data, the latter being known as objects. With reference types, it is possible for two variables to reference the same object and thus possible for operations on one variable to affect the object referenced by the other variable. With value types, the variables each have their own copy of the data, and it is not possible for operations on one to affect the other (except in the case of `ref` and `out` parameter variables).
 
-C# 值类型又细分***简单类型***，***枚举类型***，***结构类型***，以及***可以为 null 类型***，和 C# 参考类型又细分***类类型***，***接口类型***，***数组类型***，以及***委托类型***。
+C#'s value types are further divided into ***simple types***, ***enum types***, ***struct types***, and ***nullable types***, and C#'s reference types are further divided into ***class types***, ***interface types***, ***array types***, and ***delegate types***.
 
-下表提供了 C# 类型系统的概述。
+The following table provides an overview of C#'s type system.
 
-| __类别__    |                 | __说明__ |
+| __Category__    |                 | __Description__ |
 |-----------------|-----------------|-----------------|
-| 值类型     | 简单类型    | 有符号的整型：`sbyte`、`short`、`int`、`long` |
-|                 |                 | 无符号的整型：`byte`、`ushort`、`uint`、`ulong` |
-|                 |                 | Unicode 字符：`char` |
-|                 |                 | IEEE 浮点：`float`、`double` |
-|                 |                 | 高精度小数：`decimal` |
-|                 |                 | 布尔：`bool` |
-|                 | 枚举类型      | 格式为 `enum E {...}` 的用户定义类型 |
-|                 | 结构类型    | 格式为 `struct S {...}` 的用户定义类型 |
-|                 | 可以为 null 的类型  | 值为 `null` 的其他所有值类型的扩展 |
-| 引用类型 | 类类型     | 其他所有类型的最终基类：`object` |
-|                 |                 | Unicode 字符串：`string` |
-|                 |                 | 格式为 `class C {...}` 的用户定义类型 |
-|                 | 接口类型 | 格式为 `interface I {...}` 的用户定义类型 |
-|                 | 数组类型     | 一维和多维，例如 `int[]` 和 `int[,]` |
-|                 | 委托类型  | 用户定义类型的窗体例如 `delegate int  D(...)` |
+| Value types     | Simple types    | Signed integral: `sbyte`, `short`, `int`, `long` |
+|                 |                 | Unsigned integral: `byte`, `ushort`, `uint`, `ulong` |
+|                 |                 | Unicode characters: `char` |
+|                 |                 | IEEE floating point: `float`, `double` |
+|                 |                 | High-precision decimal: `decimal` |
+|                 |                 | Boolean: `bool` |
+|                 | Enum types      | User-defined types of the form `enum E {...}` |
+|                 | Struct types    | User-defined types of the form `struct S {...}` |
+|                 | Nullable types  | Extensions of all other value types with a `null` value |
+| Reference types | Class types     | Ultimate base class of all other types: `object` |
+|                 |                 | Unicode strings: `string` |
+|                 |                 | User-defined types of the form `class C {...}` |
+|                 | Interface types | User-defined types of the form `interface I {...}` |
+|                 | Array types     | Single- and multi-dimensional, for example, `int[]` and `int[,]` |
+|                 | Delegate types  | User-defined types of the form e.g. `delegate int  D(...)` |
 
-八个整型类型支持带符号或不带符号格式的 8 位、16 位、32 位和 64 位值。
+The eight integral types provide support for 8-bit, 16-bit, 32-bit, and 64-bit values in signed or unsigned form.
 
-两个浮动点类型，`float`和`double`，使用 32 位单精度和 64 位双精度 IEEE 754 格式表示。
+The two floating point types, `float` and `double`, are represented using the 32-bit single-precision and 64-bit double-precision IEEE 754 formats.
 
-`decimal` 类型是适用于财务和货币计算的 128 位数据类型。
+The `decimal` type is a 128-bit data type suitable for financial and monetary calculations.
 
-C#`bool`类型用于表示布尔值 — 值要么`true`或`false`。
+C#'s `bool` type is used to represent boolean values—values that are either `true` or `false`.
 
-C# 使用 Unicode 编码处理字符和字符串。 `char` 类型表示 UTF-16 代码单元，`string` 类型表示一系列 UTF-16 代码单元。
+Character and string processing in C# uses Unicode encoding. The `char` type represents a UTF-16 code unit, and the `string` type represents a sequence of UTF-16 code units.
 
-下表总结了 C# 的数值类型。
+The following table summarizes C#'s numeric types.
 
 
-| __类别__      | __Bits__ | __Type__  | __作用域/精度__ |
+| __Category__      | __Bits__ | __Type__  | __Range/Precision__ |
 |-------------------|----------|-----------|---------------------|
-| 有符号的整型   | 8        | `sbyte`   | -128...127 |
+| Signed integral   | 8        | `sbyte`   | -128...127 |
 |                   | 16       | `short`   | -32,768...32,767 |
 |                   | 32       | `int`     | -2,147,483,648...2,147,483,647 |
 |                   | 64       | `long`    | -9,223,372,036,854,775,808...9,223,372,036,854,775,807 |
-| 无符号的整型 | 8        | `byte`    | 0...255 |
+| Unsigned integral | 8        | `byte`    | 0...255 |
 |                   | 16       | `ushort`  | 0...65,535 |
 |                   | 32       | `uint`    | 0...4,294,967,295 |
 |                   | 64       | `ulong`   | 0...18,446,744,073,709,551,615 |
-| 浮点    | 32       | `float`   | 1.5 × 10 ^-45 到 3.4 × 10 ^38，7 位精度 |
-|                   | 64       | `double`  | 5.0 × 10 ^-324 到 1.7 × 10 ^308，15 位精度 |
-| 十进制           | 128      | `decimal` | 1.0 × 10 ^28 到 7.9 × 10 ^28、 28 位精度 |
+| Floating point    | 32       | `float`   | 1.5 × 10^−45 to 3.4 × 10^38, 7-digit precision |
+|                   | 64       | `double`  | 5.0 × 10^−324 to 1.7 × 10^308, 15-digit precision |
+| Decimal           | 128      | `decimal` | 1.0 × 10^−28 to 7.9 × 10^28, 28-digit precision |
 
-C# 程序使用***类型声明***创建新类型。 类型声明指定新类型的名称和成员。 C# 类型的类别的五个是用户可定义： 类类型、 结构类型、 接口类型、 枚举类型和委托类型。
+C# programs use ***type declarations*** to create new types. A type declaration specifies the name and the members of the new type. Five of C#'s categories of types are user-definable: class types, struct types, interface types, enum types, and delegate types.
 
-类类型定义包含数据成员 （字段） 和函数成员 （方法、 属性和其他人） 的数据结构。 类类型支持单一继承和多形性，即派生类可以扩展和专门针对基类的机制。
+A class type defines a data structure that contains data members (fields) and function members (methods, properties, and others). Class types support single inheritance and polymorphism, mechanisms whereby derived classes can extend and specialize base classes.
 
-它表示与数据成员和函数成员的结构，结构类型是类类型相似。 但是，与类不同，结构是值类型，不需要堆分配。 结构类型不支持用户指定的继承，并且所有结构类型均隐式继承自类型 `object`。
+A struct type is similar to a class type in that it represents a structure with data members and function members. However, unlike classes, structs are value types and do not require heap allocation. Struct types do not support user-specified inheritance, and all struct types implicitly inherit from type `object`.
 
-接口类型作为公共函数成员的命名数据集定义一个协定。 类或结构实现的接口必须提供接口的函数成员的实现。 一个接口可能从多个基接口继承，类或结构可以实现多个接口。
+An interface type defines a contract as a named set of public function members. A class or struct that implements an interface must provide implementations of the interface's function members. An interface may inherit from multiple base interfaces, and a class or struct may implement multiple interfaces.
 
-委托类型表示对具有特定参数列表和返回类型的方法的引用。 通过委托，可以将方法视为可分配给变量并可作为参数传递的实体。 委托类似于其他一些语言中的函数指针概念，但与函数指针不同的是，委托不仅面向对象，还类型安全。
+A delegate type represents references to methods with a particular parameter list and return type. Delegates make it possible to treat methods as entities that can be assigned to variables and passed as parameters. Delegates are similar to the concept of function pointers found in some other languages, but unlike function pointers, delegates are object-oriented and type-safe.
 
-类、 结构、 接口和委托类型全部都支持泛型，因此它们可以进行参数化与其他类型。
+Class, struct, interface and delegate types all support generics, whereby they can be parameterized with other types.
 
-枚举类型是具有已命名常数的不同类型。 每个枚举类型都有基础类型，它必须是八种整型类型之一。 枚举类型的值集是相同的基础类型的值集。
+An enum type is a distinct type with named constants. Every enum type has an underlying type, which must be one of the eight integral types. The set of values of an enum type is the same as the set of values of the underlying type.
 
-C# 支持任意类型的一维和多维数组。 与上述类型不同，数组类型无需先声明即可使用。 相反，数组类型是通过在类型名称后面添加方括号构造而成。 例如，`int[]`是一维数组`int`，`int[,]`是一个二维数组`int`，并`int[][]`是一维数组的一维数组`int`。
+C# supports single- and multi-dimensional arrays of any type. Unlike the types listed above, array types do not have to be declared before they can be used. Instead, array types are constructed by following a type name with square brackets. For example, `int[]` is a single-dimensional array of `int`, `int[,]` is a two-dimensional array of `int`, and `int[][]` is a single-dimensional array of single-dimensional arrays of `int`.
 
-可以为 null 的类型也无需然后可以使用这些声明。 对于每个不可为 null 的值类型`T`相应的可以为 null 类型`T?`，后者可以包含其他值`null`。 例如，`int?`是可以包含任何 32 位整数或值类型`null`。
+Nullable types also do not have to be declared before they can be used. For each non-nullable value type `T` there is a corresponding nullable type `T?`, which can hold an additional value `null`. For instance, `int?` is a type that can hold any 32 bit integer or the value `null`.
 
-C# 类型系统被统一的这样可以任何类型的值视为对象。 每种 C# 类型都直接或间接地派生自 `object` 类类型，而 `object` 是所有类型的最终基类。 只需将值视为类型 `object`，即可将引用类型的值视为对象。 值类型的值作为对象处理通过执行***装箱***并***取消装箱***操作。 在以下示例中，`int` 值被转换成 `object`，然后又恢复成 `int`。
+C#'s type system is unified such that a value of any type can be treated as an object. Every type in C# directly or indirectly derives from the `object` class type, and `object` is the ultimate base class of all types. Values of reference types are treated as objects simply by viewing the values as type `object`. Values of value types are treated as objects by performing ***boxing*** and ***unboxing*** operations. In the following example, an `int` value is converted to `object` and back again to `int`.
 
 ```csharp
 using System;
@@ -216,111 +208,111 @@ class Test
     }
 }
 ```
-当一个值类型的值转换为类型`object`、 对象实例，也称为"box"分配为保存值，和的值复制到相应的箱。 相反，当`object`引用强制转换为值类型，引用的对象是正确的值类型的一个框，则进行检查，并检查成功，如果将框中的值复制出来。
+When a value of a value type is converted to type `object`, an object instance, also called a "box," is allocated to hold the value, and the value is copied into that box. Conversely, when an `object` reference is cast to a value type, a check is made that the referenced object is a box of the correct value type, and, if the check succeeds, the value in the box is copied out.
 
-C# 的统一的类型系统实际上意味着值类型可以转换为"按需。"的对象 鉴于这种统一性，使用类型 `object` 的常规用途库可以与引用类型和值类型结合使用。
+C#'s unified type system effectively means that value types can become objects "on demand." Because of the unification, general-purpose libraries that use type `object` can be used with both reference types and value types.
 
-C# 有多种***变量***，其中包括字段、数组元素、局部变量和参数。 变量表示存储位置，并且每个变量类型，用于确定值可以是存储在变量中，按下表所示。
+There are several kinds of ***variables*** in C#, including fields, array elements, local variables, and parameters. Variables represent storage locations, and every variable has a type that determines what values can be stored in the variable, as shown by the following table.
 
 
-| __变量的类型__    | __可能的内容__ |
+| __Type of Variable__    | __Possible Contents__ |
 |-------------------------|-----------------------|
-| 不可以为 null 的值类型 | 具有精确类型的值 |
-| 可以为 null 的值类型     | Null 值或精确类型的值 |
-| `object`                | 空引用、 对任何引用类型的对象的引用或对任何值类型的装箱值的引用 |
-| 类类型              | 派生自类类型的空引用、 对类类型的实例的引用或对类的实例的引用 |
-| 接口类型          | 空引用、 对实现接口类型，类类型的实例的引用或对实现该接口类型的值类型的装箱值的引用 |
-| 数组类型              | 空引用、 对该数组类型的实例的引用或对兼容的数组类型的实例的引用 |
-| 委托类型           | Null 引用或对该委托类型的实例的引用 |
+| Non-nullable value type | A value of that exact type |
+| Nullable value type     | A null value or a value of that exact type |
+| `object`                | A null reference, a reference to an object of any reference type, or a reference to a boxed value of any value type |
+| Class type              | A null reference, a reference to an instance of that class type, or a reference to an instance of a class derived from that class type |
+| Interface type          | A null reference, a reference to an instance of a class type that implements that interface type, or a reference to a boxed value of a value type that implements that interface type |
+| Array type              | A null reference, a reference to an instance of that array type, or a reference to an instance of a compatible array type |
+| Delegate type           | A null reference or a reference to an instance of that delegate type |
 
-## <a name="expressions"></a>表达式
+## <a name="expressions"></a>Expressions
 
-***表达式***是在***操作数***和***运算符***的基础之上构造而成。 表达式的运算符指明了向操作数应用的运算。 运算符的示例包括 `+`、`-`、`*`、`/` 和 `new`。 操作数的示例包括文本、字段、局部变量和表达式。
+***Expressions*** are constructed from ***operands*** and ***operators***. The operators of an expression indicate which operations to apply to the operands. Examples of operators include `+`, `-`, `*`, `/`, and `new`. Examples of operands include literals, fields, local variables, and expressions.
 
-如果表达式包含多个运算符，那么运算符的***优先级***决定了各个运算符的计算顺序。 例如，表达式 `x + y * z` 相当于计算 `x + (y * z)`，因为 `*` 运算符的优先级高于 `+` 运算符。
+When an expression contains multiple operators, the ***precedence*** of the operators controls the order in which the individual operators are evaluated. For example, the expression `x + y * z` is evaluated as `x + (y * z)` because the `*` operator has higher precedence than the `+` operator.
 
-大多数运算符都可以***重载***。 借助运算符重载，可以为一个或两个操作数为用户定义类或结构类型的运算指定用户定义运算符实现代码。
+Most operators can be ***overloaded***. Operator overloading permits user-defined operator implementations to be specified for operations where one or both of the operands are of a user-defined class or struct type.
 
-下表总结了 C# 运算符，并列出按优先级从高到低的顺序的运算符类别。 同一类别的运算符的优先级也相同。
+The following table summarizes C#'s operators, listing the operator categories in order of precedence from highest to lowest. Operators in the same category have equal precedence.
 
 
-| __类别__                     | __表达式__    | __说明__ |
+| __Category__                     | __Expression__    | __Description__ |
 |----------------------------------|-------------------|-----------------|
-| 基本                          | `x.m`             | 成员访问 |
-|                                  | `x(...)`          | 方法和委托调用 |
-|                                  | `x[...]`          | 数组和索引器访问 |
-|                                  | `x++`             | 后递增 |
-|                                  | `x--`             | 后递减 |
-|                                  | `new T(...)`      | 对象和委托创建 |
-|                                  | `new T(...){...}` | 使用初始值设定项的对象创建 |
-|                                  | `new {...}`       | 匿名对象初始值设定项 |
-|                                  | `new T[...]`      | 数组创建 |
-|                                  | `typeof(T)`       | 获取`System.Type`对象 `T` |
-|                                  | `checked(x)`      | 在已检查的上下文中计算表达式 |
-|                                  | `unchecked(x)`    | 在未检查的上下文中计算表达式 |
-|                                  | `default(T)`      | 获取类型的默认值 `T` |
-|                                  | `delegate {...}`  | 匿名函数（匿名方法） |
-| 一元                            | `+x`              | 标识 |
-|                                  | `-x`              | 求反 |
-|                                  | `!x`              | 逻辑求反 |
-|                                  | `~x`              | 按位求反 |
-|                                  | `++x`             | 前递增 |
-|                                  | `--x`             | 前递减 |
-|                                  | `(T)x`            | 显式转换`x`类型 `T` |
-|                                  | `await x`         | 以异步方式等待`x`完成 |
-| 乘法                   | `x * y`           | 乘法 |
-|                                  | `x / y`           | 除号 |
-|                                  | `x % y`           | 余数 |
-| 加法                         | `x + y`           | 相加、字符串串联、委托组合 |
-|                                  | `x - y`           | 相减、委托移除 |
-| 移位                            | `x << y`          | 左移 |
-|                                  | `x >> y`          | 右移 |
-| 关系和类型测试      | `x < y`           | 小于 |
-|                                  | `x > y`           | 大于 |
-|                                  | `x <= y`          | 小于或等于 |
-|                                  | `x >= y`          | 大于或等于 |
-|                                  | `x is T`          | 返回`true`如果`x`是`T`，`false`否则为 |
-|                                  | `x as T`          | 返回`x`化为`T`，或`null`如果`x`不是 `T` |
-| 相等                         | `x == y`          | 等于      |
-|                                  | `x != y`          | 不等于 |
-| 逻辑“与”                      | `x & y`           | 整型按位 AND，布尔型逻辑与 |
-| 逻辑 XOR                      | `x ^ y`           | 整型按位 XOR，布尔型逻辑 XOR |
-| 逻辑“或”                       | <code>x &#124; y</code> | 整型按位“或”，布尔型逻辑“或” |
-| 条件“与”                  | `x && y`          | 计算结果`y`仅当`x`是 `true` |
-| 条件“或”                   | <code>x &#124;&#124; y</code> | 计算结果`y`仅当`x`是 `false` |
-| null 合并                  | `X ?? y`          | 计算结果为`y`如果`x`是`null`到`x`否则为 |
-| 条件运算                      | `x ? y : z`       | 计算结果`y`如果`x`是`true`，`z`如果`x`是 `false` |
-| 赋值或匿名函数 | `x = y`           | 赋值 |
-|                                  | `x op= y`         | 复合赋值;支持的运算符是 `*=` `/=` `%=` `+=` `-=` `<<=` `>>=` `&=` `^=` <code>&#124;=</code> |
-|                                  | `(T x) => y`      | 匿名函数（lambda 表达式） |
+| Primary                          | `x.m`             | Member access |
+|                                  | `x(...)`          | Method and delegate invocation |
+|                                  | `x[...]`          | Array and indexer access |
+|                                  | `x++`             | Post-increment |
+|                                  | `x--`             | Post-decrement |
+|                                  | `new T(...)`      | Object and delegate creation |
+|                                  | `new T(...){...}` | Object creation with initializer |
+|                                  | `new {...}`       | Anonymous object initializer |
+|                                  | `new T[...]`      | Array creation |
+|                                  | `typeof(T)`       | Obtain `System.Type` object for `T` |
+|                                  | `checked(x)`      | Evaluate expression in checked context |
+|                                  | `unchecked(x)`    | Evaluate expression in unchecked context |
+|                                  | `default(T)`      | Obtain default value of type `T` |
+|                                  | `delegate {...}`  | Anonymous function (anonymous method) |
+| Unary                            | `+x`              | Identity |
+|                                  | `-x`              | Negation |
+|                                  | `!x`              | Logical negation |
+|                                  | `~x`              | Bitwise negation |
+|                                  | `++x`             | Pre-increment |
+|                                  | `--x`             | Pre-decrement |
+|                                  | `(T)x`            | Explicitly convert `x` to type `T` |
+|                                  | `await x`         | Asynchronously wait for `x` to complete |
+| Multiplicative                   | `x * y`           | Multiplication |
+|                                  | `x / y`           | Division |
+|                                  | `x % y`           | Remainder |
+| Additive                         | `x + y`           | Addition, string concatenation, delegate combination |
+|                                  | `x - y`           | Subtraction, delegate removal |
+| Shift                            | `x << y`          | Shift left |
+|                                  | `x >> y`          | Shift right |
+| Relational and type testing      | `x < y`           | Less than |
+|                                  | `x > y`           | Greater than |
+|                                  | `x <= y`          | Less than or equal |
+|                                  | `x >= y`          | Greater than or equal |
+|                                  | `x is T`          | Return `true` if `x` is a `T`, `false` otherwise |
+|                                  | `x as T`          | Return `x` typed as `T`, or `null` if `x` is not a `T` |
+| Equality                         | `x == y`          | Equal      |
+|                                  | `x != y`          | Not equal |
+| Logical AND                      | `x & y`           | Integer bitwise AND, boolean logical AND |
+| Logical XOR                      | `x ^ y`           | Integer bitwise XOR, boolean logical XOR |
+| Logical OR                       | <code>x &#124; y</code> | Integer bitwise OR, boolean logical OR |
+| Conditional AND                  | `x && y`          | Evaluates `y` only if `x` is `true` |
+| Conditional OR                   | <code>x &#124;&#124; y</code> | Evaluates `y` only if `x` is `false` |
+| Null coalescing                  | `X ?? y`          | Evaluates to `y` if `x` is `null`, to `x` otherwise |
+| Conditional                      | `x ? y : z`       | Evaluates `y` if `x` is `true`, `z` if `x` is `false` |
+| Assignment or anonymous function | `x = y`           | Assignment |
+|                                  | `x op= y`         | Compound assignment; supported operators are `*=` `/=` `%=` `+=` `-=` `<<=` `>>=` `&=` `^=` <code>&#124;=</code> |
+|                                  | `(T x) => y`      | Anonymous function (lambda expression) |
 
-## <a name="statements"></a>语句
+## <a name="statements"></a>Statements
 
-程序操作使用***语句***进行表示。 C# 支持几种不同的语句，其中许多语句是从嵌入语句的角度来定义的。
+The actions of a program are expressed using ***statements***. C# supports several different kinds of statements, a number of which are defined in terms of embedded statements.
 
-使用***代码块***，可以在允许编写一个语句的上下文中编写多个语句。 代码块是由一系列在分隔符 `{` 和 `}` 内编写的语句组成。
+A ***block*** permits multiple statements to be written in contexts where a single statement is allowed. A block consists of a list of statements written between the delimiters `{` and `}`.
 
-***声明语句***用于声明局部变量和常量。
+***Declaration statements*** are used to declare local variables and constants.
 
-***表达式语句***用于计算表达式。 可用作语句的表达式包括方法调用的对象使用的分配`new`运算符、 角色分配使用`=`和复合赋值运算符，使用递增和递减操作`++`和`--`运算符和 await 表达式。
+***Expression statements*** are used to evaluate expressions. Expressions that can be used as statements include method invocations, object allocations using the `new` operator, assignments using `=` and the compound assignment operators, increment and decrement operations using the `++` and `--` operators and await expressions.
 
-***选择语句***用于根据一些表达式的值从多个可能的语句中选择一个以供执行。 这一类语句包括 `if` 和 `switch` 语句。
+***Selection statements*** are used to select one of a number of possible statements for execution based on the value of some expression. In this group are the `if` and `switch` statements.
 
-***迭代语句***用于重复执行嵌入的语句。 这一类语句包括 `while`、`do`、`for` 和 `foreach` 语句。
+***Iteration statements*** are used to repeatedly execute an embedded statement. In this group are the `while`, `do`, `for`, and `foreach` statements.
 
-***跳转语句***用于转移控制权。 这一类语句包括 `break`、`continue`、`goto`、`throw`、`return` 和 `yield` 语句。
+***Jump statements*** are used to transfer control. In this group are the `break`, `continue`, `goto`, `throw`, `return`, and `yield` statements.
 
-`try`...`catch` 语句用于捕获在代码块执行期间发生的异常，`try`...`finally` 语句用于指定始终执行的最终代码，无论异常发生与否。
+The `try`...`catch` statement is used to catch exceptions that occur during execution of a block, and the `try`...`finally` statement is used to specify finalization code that is always executed, whether an exception occurred or not.
 
-`checked`和`unchecked`语句用于控制溢出检查上下文的整型类型算术运算和转换。
+The `checked` and `unchecked` statements are used to control the overflow checking context for integral-type arithmetic operations and conversions.
 
-`lock` 语句用于获取给定对象的相互排斥锁定，执行语句，然后解除锁定。
+The `lock` statement is used to obtain the mutual-exclusion lock for a given object, execute a statement, and then release the lock.
 
-`using` 语句用于获取资源，执行语句，然后释放资源。
+The `using` statement is used to obtain a resource, execute a statement, and then dispose of that resource.
 
-下面是语句的每个类型示例
+Below are examples of each kind of statement
 
-__本地变量声明__
+__Local variable declarations__
 
 ```csharp
 static void Main() {
@@ -332,7 +324,7 @@ static void Main() {
 ```
 
 
-__局部常量声明__
+__Local constant declaration__
 
 ```csharp
 static void Main() {
@@ -343,7 +335,7 @@ static void Main() {
 ```
 
 
-__表达式语句__
+__Expression statement__
 
 ```csharp
 static void Main() {
@@ -355,7 +347,7 @@ static void Main() {
 }
 ```
 
-__`if` 语句__
+__`if` statement__
 
 ```csharp
 static void Main(string[] args) {
@@ -369,7 +361,7 @@ static void Main(string[] args) {
 ```
 
 
-__`switch` 语句__
+__`switch` statement__
 
 ```csharp
 static void Main(string[] args) {
@@ -388,7 +380,7 @@ static void Main(string[] args) {
 }
 ```
 
-__`while` 语句__
+__`while` statement__
 
 ```csharp
 static void Main(string[] args) {
@@ -401,7 +393,7 @@ static void Main(string[] args) {
 ```
 
 
-__`do` 语句__
+__`do` statement__
 
 ```csharp
 static void Main() {
@@ -413,7 +405,7 @@ static void Main() {
 }
 ```
 
-__`for` 语句__
+__`for` statement__
 
 ```csharp
 static void Main(string[] args) {
@@ -423,7 +415,7 @@ static void Main(string[] args) {
 }
 ```
 
-__`foreach` 语句__
+__`foreach` statement__
 
 ```csharp
 static void Main(string[] args) {
@@ -433,7 +425,7 @@ static void Main(string[] args) {
 }
 ```
 
-__`break` 语句__
+__`break` statement__
 
 ```csharp
 static void Main() {
@@ -445,7 +437,7 @@ static void Main() {
 }
 ```
 
-__`continue` 语句__
+__`continue` statement__
 
 ```csharp
 static void Main(string[] args) {
@@ -456,7 +448,7 @@ static void Main(string[] args) {
 }
 ```
 
-__`goto` 语句__
+__`goto` statement__
 
 ```csharp
 static void Main(string[] args) {
@@ -469,7 +461,7 @@ static void Main(string[] args) {
 }
 ```
 
-__`return` 语句__
+__`return` statement__
 
 ```csharp
 static int Add(int a, int b) {
@@ -482,7 +474,7 @@ static void Main() {
 }
 ```
 
-__`yield` 语句__
+__`yield` statement__
 
 ```csharp
 static IEnumerable<int> Range(int from, int to) {
@@ -499,7 +491,7 @@ static void Main() {
 }
 ```
 
-__`throw` 和`try`语句__
+__`throw` and `try` statements__
 
 ```csharp
 static double Divide(double x, double y) {
@@ -525,7 +517,7 @@ static void Main(string[] args) {
 }
 ```
 
-__`checked` 和`unchecked`语句__
+__`checked` and `unchecked` statements__
 
 ```csharp
 static void Main() {
@@ -539,7 +531,7 @@ static void Main() {
 }
 ```
 
-__`lock` 语句__
+__`lock` statement__
 
 ```csharp
 class Account
@@ -556,7 +548,7 @@ class Account
 }
 ```
 
-__`using` 语句__
+__`using` statement__
 
 ```csharp
 static void Main() {
@@ -568,13 +560,13 @@ static void Main() {
 }
 ```
 
-## <a name="classes-and-objects"></a>类和对象
+## <a name="classes-and-objects"></a>Classes and objects
 
-***类***是最基本的 C# 类型。 类是一种数据结构，可在一个单元中就将状态（字段）和操作（方法和其他函数成员）结合起来。 类为动态创建的类***实例***（亦称为“***对象***”）提供了定义。 类支持***继承***和***多形性***，即***派生类***可以扩展和专门针对***基类***的机制。
+***Classes*** are the most fundamental of C#'s types. A class is a data structure that combines state (fields) and actions (methods and other function members) in a single unit. A class provides a definition for dynamically created ***instances*** of the class, also known as ***objects***. Classes support ***inheritance*** and ***polymorphism***, mechanisms whereby ***derived classes*** can extend and specialize ***base classes***.
 
-新类使用类声明进行创建。 类声明的开头是标头，指定了类的特性和修饰符、类名、基类（若指定）以及类实现的接口。 标头后面是类主体，由在分隔符 `{` 和 `}` 内编写的成员声明列表组成。
+New classes are created using class declarations. A class declaration starts with a header that specifies the attributes and modifiers of the class, the name of the class, the base class (if given), and the interfaces implemented by the class. The header is followed by the class body, which consists of a list of member declarations written between the delimiters `{` and `}`.
 
-以下是简单类 `Point` 的声明：
+The following is a declaration of a simple class named `Point`:
 
 ```csharp
 public class Point
@@ -587,50 +579,50 @@ public class Point
     }
 }
 ```
-类实例是使用 `new` 运算符进行创建，此运算符为新实例分配内存，调用构造函数来初始化实例，并返回对实例的引用。 以下语句创建两个`Point`对象并将对这些对象的引用存储在两个变量：
+Instances of classes are created using the `new` operator, which allocates memory for a new instance, invokes a constructor to initialize the instance, and returns a reference to the instance. The following statements create two `Point` objects and store references to those objects in two variables:
 
 ```
 Point p1 = new Point(0, 0);
 Point p2 = new Point(10, 20);
 ```
-不再使用对象时，将自动收回由对象占用的内存。 既没必要，也无法在 C# 中显式解除分配对象。
+The memory occupied by an object is automatically reclaimed when the object is no longer in use. It is neither necessary nor possible to explicitly deallocate objects in C#.
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
-类的成员为***静态成员***或***实例成员***。 静态成员属于类，而实例成员则属于对象（类实例）。
+The members of a class are either ***static members*** or ***instance members***. Static members belong to classes, and instance members belong to objects (instances of classes).
 
-下表提供了一个类可以包含的成员类型的概述。
+The following table provides an overview of the kinds of members a class can contain.
 
 
-| __成员__   | __说明__ |
+| __Member__   | __Description__ |
 |------------  |-----------------|
-| 常量    | 与类相关联的常量值 |
-| 字段       | 类的常量 |
-| 方法      | 类可以执行的计算和操作 |
-| 属性   | 与读取和写入类的已命名属性相关联的操作 |
-| 索引器     | 与将类实例编入索引（像处理数组一样）相关联的操作 |
-| 事件       | 类可以生成的通知 |
-| 运算符    | 类支持的转换和表达式运算符 |
-| 构造函数 | 初始化类实例或类本身所需的操作 |
-| 析构函数  | 永久放弃类实例前要执行的操作 |
-| 类型        | 类声明的嵌套类型 |
+| Constants    | Constant values associated with the class |
+| Fields       | Variables of the class |
+| Methods      | Computations and actions that can be performed by the class |
+| Properties   | Actions associated with reading and writing named properties of the class |
+| Indexers     | Actions associated with indexing instances of the class like an array |
+| Events       | Notifications that can be generated by the class |
+| Operators    | Conversions and expression operators supported by the class |
+| Constructors | Actions required to initialize instances of the class or the class itself |
+| Destructors  | Actions to perform before instances of the class are permanently discarded |
+| Types        | Nested types declared by the class |
 
-### <a name="accessibility"></a>可访问性
+### <a name="accessibility"></a>Accessibility
 
-每个类成员都有关联的可访问性，用于控制能够访问成员的程序文本区域。 可访问性有五种可能的形式。 下表概述了这些报表。
+Each member of a class has an associated accessibility, which controls the regions of program text that are able to access the member. There are five possible forms of accessibility. These are summarized in the following table.
 
 
-| __辅助功能__    | __含义__ |
+| __Accessibility__    | __Meaning__ |
 |----------------------|-----------------|
-| `public`             | 访问不受限 |
-| `protected`          | 只能访问此类或派生自此类的类 |
-| `internal`           | 只能访问此程序 |
-| `protected internal` | 只能访问此程序或派生自此类的类 |
-| `private`            | 只能访问此类 |
+| `public`             | Access not limited |
+| `protected`          | Access limited to this class or classes derived from this class |
+| `internal`           | Access limited to this program |
+| `protected internal` | Access limited to this program or classes derived from this class |
+| `private`            | Access limited to this class |
 
-### <a name="type-parameters"></a>类型参数
+### <a name="type-parameters"></a>Type parameters
 
-类定义可能会按如下方式指定一组类型参数：在类名后面用尖括号括住类型参数名称列表。 类型参数可用于在类声明的主体中定义类的成员。 在以下示例中，`Pair` 的类型参数是 `TFirst` 和 `TSecond`：
+A class definition may specify a set of type parameters by following the class name with angle brackets enclosing a list of type parameter names. The type parameters can the be used in the body of the class declarations to define the members of the class. In the following example, the type parameters of `Pair` are `TFirst` and `TSecond`:
 
 ```csharp
 public class Pair<TFirst,TSecond>
@@ -639,21 +631,21 @@ public class Pair<TFirst,TSecond>
     public TSecond Second;
 }
 ```
-被声明为采用类型参数的类类型称为泛型类类型。 结构、接口和委托类型也可以是泛型。
+A class type that is declared to take type parameters is called a generic class type. Struct, interface and delegate types can also be generic.
 
-使用泛型类时，必须为每个类型参数提供类型自变量：
+When the generic class is used, type arguments must be provided for each of the type parameters:
 
 ```csharp
 Pair<int,string> pair = new Pair<int,string> { First = 1, Second = "two" };
 int i = pair.First;     // TFirst is int
 string s = pair.Second; // TSecond is string
 ```
-泛型类型包含类型自变量，如`Pair<int,string>
-    `更高版本，称为构造的类型。
+A generic type with type arguments provided, like `Pair<int,string>
+    ` above, is called a constructed type.
 
-### <a name="base-classes"></a>基类
+### <a name="base-classes"></a>Base classes
 
-类声明可能会按如下方式指定基类：在类名和类型参数后面编写冒号和基类名。 省略基类规范与从 `object` 类型派生相同。 在以下示例中，`Point3D` 的基类是 `Point`，`Point` 的基类是 `object`：
+A class declaration may specify a base class by following the class name and type parameters with a colon and the name of the base class. Omitting a base class specification is the same as deriving from type `object`. In the following example, the base class of `Point3D` is `Point`, and the base class of `Point` is `object`:
 
 ```csharp
 public class Point
@@ -675,24 +667,24 @@ public class Point3D: Point
     }
 }
 ```
-类继承其基类的成员。 继承是指一个类隐式包含其基本类，实例和静态构造函数和基类的析构函数除外的所有成员。 派生类可以其继承的类添加新成员，但无法删除继承成员的定义。 在上面的示例中，`Point3D` 从 `Point` 继承了 `x` 和 `y` 字段，每个 `Point3D` 实例均包含三个字段（`x`、`y` 和 `z`）。
+A class inherits the members of its base class. Inheritance means that a class implicitly contains all members of its base class, except for the instance and static constructors, and the destructors of the base class. A derived class can add new members to those it inherits, but it cannot remove the definition of an inherited member. In the previous example, `Point3D` inherits the `x` and `y` fields from `Point`, and every `Point3D` instance contains three fields, `x`, `y`, and `z`.
 
-可以将类类型隐式转换成其任意基类类型。 因此，类类型的变量可以引用相应类的实例或任意派生类的实例。 例如，类声明如上，`Point` 类型的变量可以引用 `Point` 或 `Point3D`：
+An implicit conversion exists from a class type to any of its base class types. Therefore, a variable of a class type can reference an instance of that class or an instance of any derived class. For example, given the previous class declarations, a variable of type `Point` can reference either a `Point` or a `Point3D`:
 
 ```csharp
 Point a = new Point(10, 20);
 Point b = new Point3D(10, 20, 30);
 ```
 
-### <a name="fields"></a>字段
+### <a name="fields"></a>Fields
 
-字段是一个类或类的实例相关联的变量。
+A field is a variable that is associated with a class or with an instance of a class.
 
-使用字段声明`static`修饰符定义***静态字段***。 静态字段只指明一个存储位置。 无论创建多少个类实例，永远只有一个静态字段副本。
+A field declared with the `static` modifier defines a ***static field***. A static field identifies exactly one storage location. No matter how many instances of a class are created, there is only ever one copy of a static field.
 
-字段声明而无需`static`修饰符定义***实例字段***。 每个类实例均包含相应类的所有实例字段的单独副本。
+A field declared without the `static` modifier defines an ***instance field***. Every instance of a class contains a separate copy of all the instance fields of that class.
 
-在以下示例中，每个 `Color` 类实例均包含 `r`、`g` 和 `b` 实例字段的单独副本，但分别只包含 `Black`、`White`、`Red`、`Green` 和 `Blue` 静态字段的一个副本：
+In the following example, each instance of the `Color` class has a separate copy of the `r`, `g`, and `b` instance fields, but there is only one copy of the `Black`, `White`, `Red`, `Green`, and `Blue` static fields:
 
 ```csharp
 public class Color
@@ -711,27 +703,27 @@ public class Color
     }
 }
 ```
-如上面的示例所示，可以使用 `readonly` 修饰符声明***只读字段***。 分配给`readonly`字段仅可用作字段的声明或同一个类的构造函数中。
+As shown in the previous example, ***read-only fields*** may be declared with a `readonly` modifier. Assignment to a `readonly` field can only occur as part of the field's declaration or in a constructor in the same class.
 
-### <a name="methods"></a>方法
+### <a name="methods"></a>Methods
 
-***方法***是实现对象或类可执行的计算或操作的成员。 ***静态方法***是通过类进行访问。 ***实例方法***是通过类实例进行访问。
+A ***method*** is a member that implements a computation or action that can be performed by an object or class. ***Static methods*** are accessed through the class. ***Instance methods*** are accessed through instances of the class.
 
-方法有一个 （可能为空） 的列表***参数***，分别代表值或变量引用传递给方法，和一个***返回类型***，它指定计算并返回值的类型该方法。 方法的返回类型是`void`如果它不返回值。
+Methods have a (possibly empty) list of ***parameters***, which represent values or variable references passed to the method, and a ***return type***, which specifies the type of the value computed and returned by the method. A method's return type is `void` if it does not return a value.
 
-方法可能也包含一组类型参数，必须在调用方法时指定类型自变量，这一点与类型一样。 与类型不同的是，通常可以根据方法调用的自变量推断出类型自变量，无需显式指定。
+Like types, methods may also have a set of type parameters, for which type arguments must be specified when the method is called. Unlike types, the type arguments can often be inferred from the arguments of a method call and need not be explicitly given.
 
-在声明方法的类中，方法的***签名***必须是唯一的。 方法签名包含方法名称、类型参数数量及其参数的数量、修饰符和类型。 方法签名不包含返回类型。
+The ***signature*** of a method must be unique in the class in which the method is declared. The signature of a method consists of the name of the method, the number of type parameters and the number, modifiers, and types of its parameters. The signature of a method does not include the return type.
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>Parameters
 
-参数用于将值或变量引用传递给方法。 方法参数从调用方法时指定的***自变量***中获取其实际值。 有四类参数：值参数、引用参数、输出参数和参数数组。
+Parameters are used to pass values or variable references to methods. The parameters of a method get their actual values from the ***arguments*** that are specified when the method is invoked. There are four kinds of parameters: value parameters, reference parameters, output parameters, and parameter arrays.
 
-***值参数***用于传递输入参数。 值参数对应于局部变量，从为其传递的自变量中获取初始值。 修改值参数不会影响为其传递的自变量。
+A ***value parameter*** is used for input parameter passing. A value parameter corresponds to a local variable that gets its initial value from the argument that was passed for the parameter. Modifications to a value parameter do not affect the argument that was passed for the parameter.
 
-可以指定默认值，从而省略相应的自变量，这样值参数就是可选的。
+Value parameters can be optional, by specifying a default value so that corresponding arguments can be omitted.
 
-***引用参数***用于传递输入和输出参数。 为引用参数传递的自变量必须是变量，并且在方法执行期间，引用参数指明的存储位置与自变量相同。 引用参数使用 `ref` 修饰符进行声明。 下面的示例展示了如何使用 `ref` 参数。
+A ***reference parameter*** is used for both input and output parameter passing. The argument passed for a reference parameter must be a variable, and during execution of the method, the reference parameter represents the same storage location as the argument variable. A reference parameter is declared with the `ref` modifier. The following example shows the use of `ref` parameters.
 
 ```csharp
 using System;
@@ -751,7 +743,7 @@ class Test
     }
 }
 ```
-***输出参数***用于传递输出参数。 输出参数与引用参数类似，不同之处在于，调用方提供的自变量的初始值并不重要。 输出参数使用 `out` 修饰符进行声明。 下面的示例展示了如何使用 `out` 参数。
+An ***output parameter*** is used for output parameter passing. An output parameter is similar to a reference parameter except that the initial value of the caller-provided argument is unimportant. An output parameter is declared with the `out` modifier. The following example shows the use of `out` parameters.
 
 ```csharp
 using System;
@@ -770,7 +762,7 @@ class Test
     }
 }
 ```
-***参数数组***允许向方法传递数量不定的自变量。 参数数组使用 `params` 修饰符进行声明。 参数数组只能是方法的最后一个参数，且参数数组的类型必须是一维数组类型。 `Write`并`WriteLine`方法的`System.Console`类是参数数组用法的典型示例。 它们的声明方式如下。
+A ***parameter array*** permits a variable number of arguments to be passed to a method. A parameter array is declared with the `params` modifier. Only the last parameter of a method can be a parameter array, and the type of a parameter array must be a single-dimensional array type. The `Write` and `WriteLine` methods of the `System.Console` class are good examples of parameter array usage. They are declared as follows.
 
 ```csharp
 public class Console
@@ -780,12 +772,12 @@ public class Console
     ...
 }
 ```
-在使用参数数组的方法中，参数数组的行为与数组类型的常规参数完全相同。 不过，在调用包含参数数组的方法时，要么可以传递参数数组类型的一个自变量，要么可以传递参数数组的元素类型的任意数量自变量。 在后一种情况中，数组实例会自动创建，并初始化为包含给定的自变量。 以下示例：
+Within a method that uses a parameter array, the parameter array behaves exactly like a regular parameter of an array type. However, in an invocation of a method with a parameter array, it is possible to pass either a single argument of the parameter array type or any number of arguments of the element type of the parameter array. In the latter case, an array instance is automatically created and initialized with the given arguments. This example
 
 ```csharp
 Console.WriteLine("x={0} y={1} z={2}", x, y, z);
 ```
-等同于编写以下代码：
+is equivalent to writing the following.
 
 ```csharp
 string s = "x={0} y={1} z={2}";
@@ -796,11 +788,11 @@ args[2] = z;
 Console.WriteLine(s, args);
 ```
 
-#### <a name="method-body-and-local-variables"></a>方法主体和局部变量
+#### <a name="method-body-and-local-variables"></a>Method body and local variables
 
-方法的正文指定要调用的方法时执行的语句。
+A method's body specifies the statements to execute when the method is invoked.
 
-方法主体可以声明特定于方法调用的变量。 此类变量称为***局部变量***。 局部变量声明指定了类型名称、变量名称以及可能的初始值。 下面的示例声明了初始值为零的局部变量 `i` 和无初始值的局部变量 `j`。
+A method body can declare variables that are specific to the invocation of the method. Such variables are called ***local variables***. A local variable declaration specifies a type name, a variable name, and possibly an initial value. The following example declares a local variable `i` with an initial value of zero and a local variable `j` with no initial value.
 
 ```csharp
 using System;
@@ -818,17 +810,17 @@ class Squares
     }
 }
 ```
-C# 要求必须先***明确赋值***局部变量，然后才能获取其值。 例如，如果上面的 `i` 声明未包含初始值，那么编译器会在后面使用 `i` 时报告错误，因为在后面使用时 `i` 不会在程序中进行明确赋值。
+C# requires a local variable to be ***definitely assigned*** before its value can be obtained. For example, if the declaration of the previous `i` did not include an initial value, the compiler would report an error for the subsequent usages of `i` because `i` would not be definitely assigned at those points in the program.
 
-方法可以使用 `return` 语句将控制权返回给调用方。 在返回 `void` 的方法中，`return` 语句无法指定表达式。 在方法中返回非`void`，`return`语句必须包括计算的返回值的表达式。
+A method can use `return` statements to return control to its caller. In a method returning `void`, `return` statements cannot specify an expression. In a method returning non-`void`, `return` statements must include an expression that computes the return value.
 
-#### <a name="static-and-instance-methods"></a>静态和实例方法
+#### <a name="static-and-instance-methods"></a>Static and instance methods
 
-与声明的方法`static`修饰符***静态方法***。 静态方法不对特定的实例起作用，只能直接访问静态成员。
+A method declared with a `static` modifier is a ***static method***. A static method does not operate on a specific instance and can only directly access static members.
 
-无需声明的方法`static`修饰符***实例方法***。 实例方法对特定的实例起作用，并能够访问静态和实例成员。 其中调用实例方法的实例可以作为 `this` 显式访问。 在静态方法中引用 `this` 会生成错误。
+A method declared without a `static` modifier is an ***instance method***. An instance method operates on a specific instance and can access both static and instance members. The instance on which an instance method was invoked can be explicitly accessed as `this`. It is an error to refer to `this` in a static method.
 
-以下 `Entity` 类包含静态和实例成员。
+The following `Entity` class has both static and instance members.
 
 ```csharp
 class Entity
@@ -853,11 +845,11 @@ class Entity
     }
 }
 ```
-每个 `Entity` 实例均有一个序列号（很可能包含此处未显示的其他一些信息）。 `Entity` 构造函数（类似于实例方法）将新实例初始化为包含下一个可用的序列号。 由于构造函数是实例成员，因此可以访问 `serialNo` 实例字段和 `nextSerialNo` 静态字段。
+Each `Entity` instance contains a serial number (and presumably some other information that is not shown here). The `Entity` constructor (which is like an instance method) initializes the new instance with the next available serial number. Because the constructor is an instance member, it is permitted to access both the `serialNo` instance field and the `nextSerialNo` static field.
 
-`GetNextSerialNo` 和 `SetNextSerialNo` 静态方法可以访问 `nextSerialNo` 静态字段，但如果直接访问 `serialNo` 实例字段，则会生成错误。
+The `GetNextSerialNo` and `SetNextSerialNo` static methods can access the `nextSerialNo` static field, but it would be an error for them to directly access the `serialNo` instance field.
 
-下面的示例演示如何使用`Entity`类。
+The following example shows the use of the `Entity` class.
 
 ```csharp
 using System;
@@ -874,19 +866,19 @@ class Test
     }
 }
 ```
-请注意，`SetNextSerialNo` 和 `GetNextSerialNo` 静态方法是在类中调用，而 `GetSerialNo` 实例方法则是在类实例中调用。
+Note that the `SetNextSerialNo` and `GetNextSerialNo` static methods are invoked on the class whereas the `GetSerialNo` instance method is invoked on instances of the class.
 
-#### <a name="virtual-override-and-abstract-methods"></a>虚方法、重写方法和抽象方法
+#### <a name="virtual-override-and-abstract-methods"></a>Virtual, override, and abstract methods
 
-如果实例方法声明中有 `virtual` 修饰符，可以将实例方法称为“***虚方法***”。 如果未`virtual`修饰符存在，该方法称为***非虚方法***。
+When an instance method declaration includes a `virtual` modifier, the method is said to be a ***virtual method***. When no `virtual` modifier is present, the method is said to be a ***non-virtual method***.
 
-调用虚方法时，为其调用方法的实例的***运行时类型***决定了要调用的实际方法实现代码。 调用非虚方法时，实例的***编译时类型***是决定性因素。
+When a virtual method is invoked, the ***run-time type*** of the instance for which that invocation takes place determines the actual method implementation to invoke. In a nonvirtual method invocation, the ***compile-time type*** of the instance is the determining factor.
 
-可以在派生类中***重写***虚方法。 如果实例方法声明包含`override`修饰符，该方法重写继承的虚方法具有相同的签名。 但如果虚方法声明中引入新方法，重写方法声明通过提供相应方法的新实现代码，专门针对现有的继承虚方法。
+A virtual method can be ***overridden*** in a derived class. When an instance method declaration includes an `override` modifier, the method overrides an inherited virtual method with the same signature. Whereas a virtual method declaration introduces a new method, an override method declaration specializes an existing inherited virtual method by providing a new implementation of that method.
 
-***抽象***方法是没有实现虚方法。 一个抽象方法声明具有`abstract`修饰符，但也被声明的类中只允许`abstract`。 必须在所有非抽象派生类中重写抽象方法。
+An ***abstract*** method is a virtual method with no implementation. An abstract method is declared with the `abstract` modifier and is permitted only in a class that is also declared `abstract`. An abstract method must be overridden in every non-abstract derived class.
 
-下面的示例声明了一个抽象类 `Expression`，用于表示表达式树节点；还声明了三个派生类（`Constant`、`VariableReference` 和 `Operation`），用于实现常量、变量引用和算术运算的表达式树节点。 (这是类似，但不要混淆与中的表达式树类型引入[表达式树类型](types.md#expression-tree-types))。
+The following example declares an abstract class, `Expression`, which represents an expression tree node, and three derived classes, `Constant`, `VariableReference`, and `Operation`, which implement expression tree nodes for constants, variable references, and arithmetic operations. (This is similar to, but not to be confused with the expression tree types introduced in [Expression tree types](types.md#expression-tree-types)).
 
 ```csharp
 using System;
@@ -952,7 +944,7 @@ public class Operation: Expression
     }
 }
 ```
-上面的四个类可用于进行算术表达式建模。 例如，使用这些类的实例，可以按如下方式表示表达式 `x + 3`。
+The previous four classes can be used to model arithmetic expressions. For example, using instances of these classes, the expression `x + 3` can be represented as follows.
 
 ```csharp
 Expression e = new Operation(
@@ -960,11 +952,11 @@ Expression e = new Operation(
     '+',
     new Constant(3));
 ```
-调用 `Expression` 实例的 `Evaluate` 方法可以计算给定的表达式并生成 `double` 值。 该方法将作为参数`Hashtable`，其中包含变量名称 （作为项键） 和值 （作为项的值）。 `Evaluate`方法是虚拟的抽象方法，这意味着非抽象派生的类必须覆盖它提供一个实际的实现。
+The `Evaluate` method of an `Expression` instance is invoked to evaluate the given expression and produce a `double` value. The method takes as an argument a `Hashtable` that contains variable names (as keys of the entries) and values (as values of the entries). The `Evaluate` method is a virtual abstract method, meaning that non-abstract derived classes must override it to provide an actual implementation.
 
-`Constant` 的 `Evaluate` 实现代码只返回存储的常量。 一个`VariableReference`的实现代码查找哈希表中的变量名称，并返回结果值。 `Operation` 实现代码先计算左右操作数（以递归方式调用其 `Evaluate` 方法），然后执行给定的算术运算。
+A `Constant`'s implementation of `Evaluate` simply returns the stored constant. A `VariableReference`'s implementation looks up the variable name in the hashtable and returns the resulting value. An `Operation`'s implementation first evaluates the left and right operands (by recursively invoking their `Evaluate` methods) and then performs the given arithmetic operation.
 
-以下程序使用 `Expression` 类根据不同的 `x` 和 `y` 值计算表达式 `x * (y + 2)`。
+The following program uses the `Expression` classes to evaluate the expression `x * (y + 2)` for different values of `x` and `y`.
 
 ```csharp
 using System;
@@ -993,9 +985,9 @@ class Test
 }
 ```
 
-#### <a name="method-overloading"></a>方法重载
+#### <a name="method-overloading"></a>Method overloading
 
-借助方法***重载***，同一类中可以有多个同名的方法，只要这些方法具有唯一签名即可。 编译如何调用重载的方法时，编译器使用***重载决策***来确定要调用的特定方法。 重载决策查找与自变量最匹配的方法；如果找不到最佳匹配项，则会报告错误。 下面的示例展示了重载决策的实际工作方式。 `Main` 方法中每个调用的注释指明了实际调用的方法。
+Method ***overloading*** permits multiple methods in the same class to have the same name as long as they have unique signatures. When compiling an invocation of an overloaded method, the compiler uses ***overload resolution*** to determine the specific method to invoke. Overload resolution finds the one method that best matches the arguments or reports an error if no single best match can be found. The following example shows overload resolution in effect. The comment for each invocation in the `Main` method shows which method is actually invoked.
 
 ```csharp
 class Test
@@ -1036,13 +1028,13 @@ class Test
     }
 }
 ```
-如示例所示，可以随时将自变量显式转换成确切的参数类型，并/或显式提供类型自变量，从而选择特定的方法。
+As shown by the example, a particular method can always be selected by explicitly casting the arguments to the exact parameter types and/or explicitly supplying type arguments.
 
-### <a name="other-function-members"></a>其他函数成员
+### <a name="other-function-members"></a>Other function members
 
-包含可执行代码的成员统称为类的***函数成员***。 上一部分介绍了作为主要函数成员类型的方法。 本部分介绍其他类型的 C# 支持的函数成员： 构造函数、 属性、 索引器、 事件、 运算符和析构函数。
+Members that contain executable code are collectively known as the ***function members*** of a class. The preceding section describes methods, which are the primary kind of function members. This section describes the other kinds of function members supported by C#: constructors, properties, indexers, events, operators, and destructors.
 
-下面的代码演示一个名为的泛型类`List<T>`，它可实现对象的可扩充列表。 此类包含最常见类型函数成员的多个示例。
+The following code shows a generic class called `List<T>`, which implements a growable list of objects. The class contains several examples of the most common kinds of function members.
 
 
 ```csharp
@@ -1125,34 +1117,34 @@ public class List<T> {
 }
 ```
 
-#### <a name="constructors"></a>构造函数
+#### <a name="constructors"></a>Constructors
 
-C# 支持实例和静态构造函数。 ***实例构造函数***是实现初始化类实例所需执行的操作的成员。 ***静态构造函数***是实现在首次加载类时初始化类本身所需执行的操作的成员。
+C# supports both instance and static constructors. An ***instance constructor*** is a member that implements the actions required to initialize an instance of a class. A ***static constructor*** is a member that implements the actions required to initialize a class itself when it is first loaded.
 
-构造函数的声明方式与方法一样，都没有返回类型，且与所含类同名。 如果构造函数声明包含`static`修饰符，它声明了静态构造函数。 否则，声明的是实例构造函数。
+A constructor is declared like a method with no return type and the same name as the containing class. If a constructor declaration includes a `static` modifier, it declares a static constructor. Otherwise, it declares an instance constructor.
 
-实例构造函数可以进行重载。 例如，`List<T>
-` 类声明两个实例构造函数：一个没有参数，另一个需要使用 `int` 参数。 实例构造函数使用 `new` 运算符进行调用。 以下语句分配两个`List<string>
-`实例使用的构造函数的每个`List`类。
+Instance constructors can be overloaded. For example, the `List<T>
+` class declares two instance constructors, one with no parameters and one that takes an `int` parameter. Instance constructors are invoked using the `new` operator. The following statements allocate two `List<string>
+` instances using each of the constructors of the `List` class.
 
 ```csharp
 List<string> list1 = new List<string>();
 List<string> list2 = new List<string>(10);
 ```
-与其他成员不同，实例构造函数不能被继承，且类中只能包含实际已声明的实例构造函数。 如果没有为类提供实例构造函数，则会自动提供不含参数的空实例构造函数。
+Unlike other members, instance constructors are not inherited, and a class has no instance constructors other than those actually declared in the class. If no instance constructor is supplied for a class, then an empty one with no parameters is automatically provided.
 
-#### <a name="properties"></a>属性
+#### <a name="properties"></a>Properties
 
-***属性***是字段的自然扩展。 两者都是包含关联类型的已命名成员，用于访问字段和属性的语法也是一样的。 不过，与字段不同的是，属性不指明存储位置。 相反，属性包含***访问器***，用于指定在读取或写入属性值时要执行的语句。
+***Properties*** are a natural extension of fields. Both are named members with associated types, and the syntax for accessing fields and properties is the same. However, unlike fields, properties do not denote storage locations. Instead, properties have ***accessors*** that specify the statements to be executed when their values are read or written.
 
-某个属性声明字段类似，只不过在声明结尾`get`访问器和/或`set`访问器编写分隔符之间`{`和`}`而不是以分号结尾。 同时具有一个属性`get`访问器和一个`set`访问器已***读-写属性***，仅具有一个属性`get`访问器是***只读属性***，和一个仅具有的属性`set`访问器已***只写属性***。
+A property is declared like a field, except that the declaration ends with a `get` accessor and/or a `set` accessor written between the delimiters `{` and `}` instead of ending in a semicolon. A property that has both a `get` accessor and a `set` accessor is a ***read-write property***, a property that has only a `get` accessor is a ***read-only property***, and a property that has only a `set` accessor is a ***write-only property***.
 
-一个`get`访问器对应于具有返回值的属性类型的无参数方法。 当在表达式中，引用属性除了作为赋值目标`get`属性访问器调用以计算属性的值。
+A `get` accessor corresponds to a parameterless method with a return value of the property type. Except as the target of an assignment, when a property is referenced in an expression, the `get` accessor of the property is invoked to compute the value of the property.
 
-一个`set`访问器对应于一种方法具有一个名为的单个参数`value`且没有返回类型。 为作为赋值目标或的操作数时引用属性`++`或`--`，则`set`用提供的新值的参数调用访问器。
+A `set` accessor corresponds to a method with a single parameter named `value` and no return type. When a property is referenced as the target of an assignment or as the operand of `++` or `--`, the `set` accessor is invoked with an argument that provides the new value.
 
-`List<T>
-`类中声明两个属性`Count`和`Capacity`，分别是只读和读写。 下面的示例展示了如何使用这些属性。
+The `List<T>
+` class declares two properties, `Count` and `Capacity`, which are read-only and read-write, respectively. The following is an example of use of these properties.
 
 ```csharp
 List<string> names = new List<string>();
@@ -1160,15 +1152,15 @@ names.Capacity = 100;            // Invokes set accessor
 int i = names.Count;             // Invokes get accessor
 int j = names.Capacity;          // Invokes get accessor
 ```
-类似于字段和方法，C# 支持实例属性和静态属性。 静态属性的声明与`static`没有它声明修饰符和实例属性。
+Similar to fields and methods, C# supports both instance properties and static properties. Static properties are declared with the `static` modifier, and instance properties are declared without it.
 
-属性的访问器可以是虚的。 如果属性声明包含 `virtual`、`abstract` 或 `override` 修饰符，则适用于属性的访问器。
+The accessor(s) of a property can be virtual. When a property declaration includes a `virtual`, `abstract`, or `override` modifier, it applies to the accessor(s) of the property.
 
-#### <a name="indexers"></a>索引器
+#### <a name="indexers"></a>Indexers
 
-借助***索引器***成员，可以将对象编入索引（像处理数组一样）。 索引器的声明与属性类似，不同的成员的名称是`this`分隔符之间写入参数列表后跟`[`和`]`。 这些参数在索引器的访问器中可用。 类似于属性，索引器分为读写、只读和只写索引器，且索引器的访问器可以是虚的。
+An ***indexer*** is a member that enables objects to be indexed in the same way as an array. An indexer is declared like a property except that the name of the member is `this` followed by a parameter list written between the delimiters `[` and `]`. The parameters are available in the accessor(s) of the indexer. Similar to properties, indexers can be read-write, read-only, and write-only, and the accessor(s) of an indexer can be virtual.
 
-`List` 类声明一个需要使用 `int` 参数的读写索引器。 借助索引器，可以使用 `int` 值将 `List` 实例编入索引。 例如
+The `List` class declares a single read-write indexer that takes an `int` parameter. The indexer makes it possible to index `List` instances with `int` values. For example
 
 ```csharp
 List<string> names = new List<string>();
@@ -1180,19 +1172,19 @@ for (int i = 0; i < names.Count; i++) {
     names[i] = s.ToUpper();
 }
 ```
-索引器可以进行重载。也就是说，类可以声明多个索引器，只要其参数的数量或类型不同即可。
+Indexers can be overloaded, meaning that a class can declare multiple indexers as long as the number or types of their parameters differ.
 
-#### <a name="events"></a>事件
+#### <a name="events"></a>Events
 
-借助***事件***成员，类或对象可以提供通知。 事件的声明与字段类似，不同的声明包含`event`关键字和类型必须是委托类型。
+An ***event*** is a member that enables a class or object to provide notifications. An event is declared like a field except that the declaration includes an `event` keyword and the type must be a delegate type.
 
-在声明事件成员的类中，事件的行为与委托类型的字段完全相同（前提是事件不是抽象的，且不声明访问器）。 字段存储对委托的引用，委托表示已添加到事件的事件处理程序。 如果没有事件处理程序，该字段是`null`。
+Within a class that declares an event member, the event behaves just like a field of a delegate type (provided the event is not abstract and does not declare accessors). The field stores a reference to a delegate that represents the event handlers that have been added to the event. If no event handles are present, the field is `null`.
 
-`List<T>
-` 类声明一个 `Changed` 事件成员，指明已向列表添加了新项。 `Changed`引发事件`OnChanged`虚拟方法，以便先检查是否`null`（这意味着没有处理程序是否存在）。 引发事件的概念恰恰等同于调用由事件表示的委托，因此，没有用于引发事件的特殊语言构造。
+The `List<T>
+` class declares a single event member called `Changed`, which indicates that a new item has been added to the list. The `Changed` event is raised by the `OnChanged` virtual method, which first checks whether the event is `null` (meaning that no handlers are present). The notion of raising an event is precisely equivalent to invoking the delegate represented by the event—thus, there are no special language constructs for raising events.
 
-客户端通过***事件处理程序***响应事件。 使用 `+=` 和 `-=` 运算符分别可以附加和删除事件处理程序。 下面的示例展示了如何向 `List<string>
-` 的 `Changed` 事件附加事件处理程序。
+Clients react to events through ***event handlers***. Event handlers are attached using the `+=` operator and removed using the `-=` operator. The following example attaches an event handler to the `Changed` event of a `List<string>
+`.
 
 ```csharp
 using System;
@@ -1215,16 +1207,16 @@ class Test
     }
 }
 ```
-对于需要控制事件的基础存储的高级方案，事件声明可以显式提供 `add` 和 `remove` 访问器，这在某种程度上与属性的 `set` 访问器类似。
+For advanced scenarios where control of the underlying storage of an event is desired, an event declaration can explicitly provide `add` and `remove` accessors, which are somewhat similar to the `set` accessor of a property.
 
-#### <a name="operators"></a>运算符
+#### <a name="operators"></a>Operators
 
-***运算符***是定义向类实例应用特定表达式运算符的含义的成员。 可以定义三种类型的运算符：一元运算符、二元运算符和转换运算符。 所有运算符都必须声明为 `public` 和 `static`。
+An ***operator*** is a member that defines the meaning of applying a particular expression operator to instances of a class. Three kinds of operators can be defined: unary operators, binary operators, and conversion operators. All operators must be declared as `public` and `static`.
 
-`List<T>
-` 类声明两个运算符（`operator==` 和 `operator!=`），因此定义了向 `List` 实例应用这些运算符的表达式的新含义。 具体而言，这些运算符定义两个相等`List<T>
-`实例作为比较每个包含的对象使用其`Equals`方法。 下面的示例展示了如何使用 `==` 运算符比较两个 `List<int>
-` 实例。
+The `List<T>
+` class declares two operators, `operator==` and `operator!=`, and thus gives new meaning to expressions that apply those operators to `List` instances. Specifically, the operators define equality of two `List<T>
+` instances as comparing each of the contained objects using their `Equals` methods. The following example uses the `==` operator to compare two `List<int>
+` instances.
 
 ```csharp
 using System;
@@ -1245,23 +1237,23 @@ class Test
 }
 ```
 
-第一个 `Console.WriteLine` 输出 `True`，因为两个列表包含的对象不仅数量相同，而且值和顺序也相同。 如果 `List<T>
-` 未定义 `operator==`，那么第一个 `Console.WriteLine` 会输出 `False`，因为 `a` 和 `b` 引用不同的 `List<int>
-` 实例。
+The first `Console.WriteLine` outputs `True` because the two lists contain the same number of objects with the same values in the same order. Had `List<T>
+` not defined `operator==`, the first `Console.WriteLine` would have output `False` because `a` and `b` reference different `List<int>
+` instances.
 
-#### <a name="destructors"></a>析构函数
+#### <a name="destructors"></a>Destructors
 
-一个***析构函数***是实现析构类的实例所必需的操作的成员。 析构函数不能有参数，它们不能具有可访问性修饰符不能显式调用。 在垃圾回收期间自动调用实例的析构函数。
+A ***destructor*** is a member that implements the actions required to destruct an instance of a class. Destructors cannot have parameters, they cannot have accessibility modifiers, and they cannot be invoked explicitly. The destructor for an instance is invoked automatically during garbage collection.
 
-垃圾回收器很大自由度中确定何时收集对象和运行析构函数。 具体而言，是不确定性的析构函数调用的计时和析构函数可能在任何线程上执行。 有关这些和其他原因，类应仅当没有其他解决方案都可行时实现析构函数。
+The garbage collector is allowed wide latitude in deciding when to collect objects and run destructors. Specifically, the timing of destructor invocations is not deterministic, and destructors may be executed on any thread. For these and other reasons, classes should implement destructors only when no other solutions are feasible.
 
-处理对象析构的更好方法是使用 `using` 语句。
+The `using` statement provides a better approach to object destruction.
 
-## <a name="structs"></a>结构
+## <a name="structs"></a>Structs
 
-***结构***是可以包含数据成员和函数成员的数据结构，这一点与类一样；与类不同的是，结构是值类型，无需进行堆分配。 结构类型的变量直接存储结构数据，而类类型的变量存储对动态分配的对象的引用。 结构类型不支持用户指定的继承，并且所有结构类型均隐式继承自类型 `object`。
+Like classes, ***structs*** are data structures that can contain data members and function members, but unlike classes, structs are value types and do not require heap allocation. A variable of a struct type directly stores the data of the struct, whereas a variable of a class type stores a reference to a dynamically allocated object. Struct types do not support user-specified inheritance, and all struct types implicitly inherit from type `object`.
 
-结构对包含值语义的小型数据结构特别有用。 复数、坐标系中的点或字典中的键值对都是结构的典型示例。 对小型数据结构使用结构（而不是类）在应用程序执行的内存分配次数上存在巨大差异。 例如，以下程序创建并初始化包含 100 个点的数组。 通过将 `Point` 实现为类，可单独实例化 101 个对象，一个对象用于数组，其他所有对象分别用于 100 个元素。
+Structs are particularly useful for small data structures that have value semantics. Complex numbers, points in a coordinate system, or key-value pairs in a dictionary are all good examples of structs. The use of structs rather than classes for small data structures can make a large difference in the number of memory allocations an application performs. For example, the following program creates and initializes an array of 100 points. With `Point` implemented as a class, 101 separate objects are instantiated—one for the array and one each for the 100 elements.
 
 ```csharp
 class Point
@@ -1282,7 +1274,7 @@ class Test
     }
 }
 ```
-一种替代方法是使`Point`结构。
+An alternative is to make `Point` a struct.
 
 ```csharp
 struct Point
@@ -1295,11 +1287,11 @@ struct Point
     }
 }
 ```
-现在，仅实例化一个对象（即用于数组的对象），`Point` 实例存储内嵌在数组中。
+Now, only one object is instantiated—the one for the array—and the `Point` instances are stored in-line in the array.
 
-结构构造函数使用 `new` 运算符进行调用，但这不并表示要分配内存。 结构构造函数只返回结构值本身（通常在堆栈的临时位置中），并在必要时复制此值，而非动态分配对象并返回对此对象的引用。
+Struct constructors are invoked with the `new` operator, but that does not imply that memory is being allocated. Instead of dynamically allocating an object and returning a reference to it, a struct constructor simply returns the struct value itself (typically in a temporary location on the stack), and this value is then copied as necessary.
 
-借助类，两个变量可以引用同一对象；因此，对一个变量执行的运算可能会影响另一个变量引用的对象。 借助结构，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量。 例如，下面的代码段生成的输出取决于是否`Point`是类还是结构。
+With classes, it is possible for two variables to reference the same object and thus possible for operations on one variable to affect the object referenced by the other variable. With structs, the variables each have their own copy of the data, and it is not possible for operations on one to affect the other. For example, the output produced by the following code fragment depends on whether `Point` is a class or a struct.
 
 ```csharp
 Point a = new Point(10, 10);
@@ -1307,17 +1299,17 @@ Point b = a;
 a.x = 20;
 Console.WriteLine(b.x);
 ```
-如果`Point`是一个类，则输出`20`因为`a`和`b`引用相同的对象。 如果`Point`是一种结构，输出是`10`因为分配`a`到`b`会创建一份值，而此副本不受后续分配到`a.x`。
+If `Point` is a class, the output is `20` because `a` and `b` reference the same object. If `Point` is a struct, the output is `10` because the assignment of `a` to `b` creates a copy of the value, and this copy is unaffected by the subsequent assignment to `a.x`.
 
-以上示例突出显示了结构的两个限制。 首先，复制整个结构通常比复制对象引用效率更低，因此通过结构进行的赋值和值参数传递可能比通过引用类型成本更高。 其次，除 `ref` 和 `out` 参数以外，无法创建对结构的引用，这就表示在很多应用场景中都不能使用结构。
+The previous example highlights two of the limitations of structs. First, copying an entire struct is typically less efficient than copying an object reference, so assignment and value parameter passing can be more expensive with structs than with reference types. Second, except for `ref` and `out` parameters, it is not possible to create references to structs, which rules out their usage in a number of situations.
 
-## <a name="arrays"></a>数组
+## <a name="arrays"></a>Arrays
 
-***数组***是一种数据结构，其中包含许多通过计算索引访问的变量。 数组中的变量（亦称为数组的***元素***）均为同一种类型，我们将这种类型称为数组的***元素类型***。
+An ***array*** is a data structure that contains a number of variables that are accessed through computed indices. The variables contained in an array, also called the ***elements*** of the array, are all of the same type, and this type is called the ***element type*** of the array.
 
-数组类型是引用类型，声明数组变量只是为引用数组实例预留空间。 在运行时使用动态创建实际数组实例`new`运算符。 `new`操作指定***长度***新数组实例，然后实例的生存期内固定。 数组元素的索引介于 `0` 到 `Length - 1` 之间。 `new` 运算符自动将数组元素初始化为其默认值（例如，所有数值类型的默认值为 0，所有引用类型的默认值为 `null`）。
+Array types are reference types, and the declaration of an array variable simply sets aside space for a reference to an array instance. Actual array instances are created dynamically at run-time using the `new` operator. The `new` operation specifies the ***length*** of the new array instance, which is then fixed for the lifetime of the instance. The indices of the elements of an array range from `0` to `Length - 1`. The `new` operator automatically initializes the elements of an array to their default value, which, for example, is zero for all numeric types and `null` for all reference types.
 
-以下示例创建 `int` 元素数组，初始化此数组，然后打印输出此数组的内容。
+The following example creates an array of `int` elements, initializes the array, and prints out the contents of the array.
 
 ```csharp
 using System;
@@ -1335,16 +1327,16 @@ class Test
     }
 }
 ```
-上面的示例创建***一维数组***，并对其执行运算。 C# 还支持***多维数组***。 数组类型的维数（亦称为数组类型的***秩***）是 1 与数组类型方括号内的逗号数量相加的结果。 以下示例分配一个一维、 二维和三维数组。
+This example creates and operates on a ***single-dimensional array***. C# also supports ***multi-dimensional arrays***. The number of dimensions of an array type, also known as the ***rank*** of the array type, is one plus the number of commas written between the square brackets of the array type. The following example allocates a one-dimensional, a two-dimensional, and a three-dimensional array.
 
 ```csharp
 int[] a1 = new int[10];
 int[,] a2 = new int[10, 5];
 int[,,] a3 = new int[10, 5, 2];
 ```
-`a1` 数组包含 10 个元素，`a2` 数组包含 50 个元素 (10 × 5)，`a3` 数组包含 100 个元素 (10 × 5 × 2)。
+The `a1` array contains 10 elements, the `a2` array contains 50 (10 × 5) elements, and the `a3` array contains 100 (10 × 5 × 2) elements.
 
-数组的元素类型可以是任意类型（包括数组类型）。 包含数组类型元素的数组有时称为***交错数组***，因为元素数组的长度不必全都一样。 以下示例分配由 `int` 数组构成的数组：
+The element type of an array can be any type, including an array type. An array with elements of an array type is sometimes called a ***jagged array*** because the lengths of the element arrays do not all have to be the same. The following example allocates an array of arrays of `int`:
 
 ```csharp
 int[][] a = new int[3][];
@@ -1352,19 +1344,19 @@ a[0] = new int[10];
 a[1] = new int[5];
 a[2] = new int[20];
 ```
-第一行创建包含三个元素的数组，每个元素都是 `int[]` 类型，并且初始值均为 `null`。 后面的代码行将这三个元素初始化为引用长度不同的各个数组实例。
+The first line creates an array with three elements, each of type `int[]` and each with an initial value of `null`. The subsequent lines then initialize the three elements with references to individual array instances of varying lengths.
 
-`new`运算符，可以使用指定的数组元素的初始值***数组初始值设定项***，这是一系列在分隔符编写的表达式`{`和`}`。 以下示例分配 `int[]`，并将其初始化为包含三个元素。
+The `new` operator permits the initial values of the array elements to be specified using an ***array initializer***, which is a list of expressions written between the delimiters `{` and `}`. The following example allocates and initializes an `int[]` with three elements.
 
 ```csharp
 int[] a = new int[] {1, 2, 3};
 ```
-请注意从内的表达式数量推断出数组的长度`{`和`}`。 局部变量和字段声明可以进一步缩短，这样就不用重新声明数组类型了。
+Note that the length of the array is inferred from the number of expressions between `{` and `}`. Local variable and field declarations can be shortened further such that the array type does not have to be restated.
 
 ```csharp
 int[] a = {1, 2, 3};
 ```
-以上两个示例等同于以下示例：
+Both of the previous examples are equivalent to the following:
 
 ```csharp
 int[] t = new int[3];
@@ -1373,11 +1365,11 @@ t[1] = 2;
 t[2] = 3;
 int[] a = t;
 ```
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>Interfaces
 
-***接口***定义了可由类和结构实现的协定。 接口可以包含方法、属性、事件和索引器。 接口不提供所定义的成员的实现代码，仅指定必须由实现接口的类或结构提供的成员。
+An ***interface*** defines a contract that can be implemented by classes and structs. An interface can contain methods, properties, events, and indexers. An interface does not provide implementations of the members it defines—it merely specifies the members that must be supplied by classes or structs that implement the interface.
 
-接口可以采用***多重继承***。 在以下示例中，接口 `IComboBox` 同时继承自 `ITextBox` 和 `IListBox`。
+Interfaces may employ ***multiple inheritance***. In the following example, the interface `IComboBox` inherits from both `ITextBox` and `IListBox`.
 
 ```csharp
 interface IControl
@@ -1397,7 +1389,7 @@ interface IListBox: IControl
 
 interface IComboBox: ITextBox, IListBox {}
 ```
-类和结构可以实现多个接口。 在以下示例中，类 `EditBox` 同时实现 `IControl` 和 `IDataBound`。
+Classes and structs can implement multiple interfaces. In the following example, the class `EditBox` implements both `IControl` and `IDataBound`.
 
 ```csharp
 interface IDataBound
@@ -1411,21 +1403,21 @@ public class EditBox: IControl, IDataBound
     public void Bind(Binder b) {...}
 }
 ```
-当类或结构实现特定接口时，此类或结构的实例可以隐式转换成相应的接口类型。 例如
+When a class or struct implements a particular interface, instances of that class or struct can be implicitly converted to that interface type. For example
 
 ```csharp
 EditBox editBox = new EditBox();
 IControl control = editBox;
 IDataBound dataBound = editBox;
 ```
-如果已知实例不是静态地实现特定接口，可以使用动态类型显式转换功能。 例如，以下语句使用动态类型强制转换获取对象的`IControl`和`IDataBound`接口实现代码。 因为该对象的实际类型是`EditBox`，显式转换会成功。
+In cases where an instance is not statically known to implement a particular interface, dynamic type casts can be used. For example, the following statements use dynamic type casts to obtain an object's `IControl` and `IDataBound` interface implementations. Because the actual type of the object is `EditBox`, the casts succeed.
 
 ```csharp
 object obj = new EditBox();
 IControl control = (IControl)obj;
 IDataBound dataBound = (IDataBound)obj;
 ```
-在前面`EditBox`类，`Paint`方法从`IControl`接口并`Bind`方法从`IDataBound`使用实现接口`public`成员。 C# 还支持***显式接口成员实现代码***，使用这类或结构可避免创建成员`public`。 显式接口成员实现代码是使用完全限定的接口成员名称进行编写。 例如，`EditBox` 类可以使用显式接口成员实现代码来实现 `IControl.Paint` 和 `IDataBound.Bind` 方法，如下所示。
+In the previous `EditBox` class, the `Paint` method from the `IControl` interface and the `Bind` method from the `IDataBound` interface are implemented using `public` members. C# also supports ***explicit interface member implementations***, using which the class or struct can avoid making the members `public`. An explicit interface member implementation is written using the fully qualified interface member name. For example, the `EditBox` class could implement the `IControl.Paint` and `IDataBound.Bind` methods using explicit interface member implementations as follows.
 
 ```csharp
 public class EditBox: IControl, IDataBound
@@ -1434,7 +1426,7 @@ public class EditBox: IControl, IDataBound
     void IDataBound.Bind(Binder b) {...}
 }
 ```
-显式接口成员只能通过接口类型进行访问。 例如，实现`IControl.Paint`由上一个提供`EditBox`类只能调用通过第一个转换`EditBox`引用添加到`IControl`接口类型。
+Explicit interface members can only be accessed via the interface type. For example, the implementation of `IControl.Paint` provided by the previous `EditBox` class can only be invoked by first converting the `EditBox` reference to the `IControl` interface type.
 
 ```csharp
 EditBox editBox = new EditBox();
@@ -1443,9 +1435,9 @@ IControl control = editBox;
 control.Paint();                        // Ok
 ```
 
-## <a name="enums"></a>枚举
+## <a name="enums"></a>Enums
 
-***枚举类型***是包含一组已命名常量的独特值类型。 以下示例声明并使用名为枚举类型`Color`包含三个常量值`Red`， `Green`，和`Blue`。
+An ***enum type*** is a distinct value type with a set of named constants. The following example declares and uses an enum type named `Color` with three constant values, `Red`, `Green`, and `Blue`.
 
 ```csharp
 using System;
@@ -1483,9 +1475,9 @@ class Test
     }
 }
 ```
-每个枚举类型具有对应的整型类型称为***基础类型***的枚举类型。 未显式声明基础类型的枚举类型有一个基础类型的`int`。 枚举类型的存储格式和可能的值的范围取决于其基础类型。 枚举类型可以采用上的值的集不受其枚举成员。 具体而言，枚举的基础类型的任何值可以转换为枚举类型，该枚举类型的不同有效值。
+Each enum type has a corresponding integral type called the ***underlying type*** of the enum type. An enum type that does not explicitly declare an underlying type has an underlying type of `int`. An enum type's storage format and range of possible values are determined by its underlying type. The set of values that an enum type can take on is not limited by its enum members. In particular, any value of the underlying type of an enum can be cast to the enum type and is a distinct valid value of that enum type.
 
-下面的示例声明名为枚举类型`Alignment`使用的基础类型为`sbyte`。
+The following example declares an enum type named `Alignment` with an underlying type of `sbyte`.
 
 ```csharp
 enum Alignment: sbyte
@@ -1495,25 +1487,25 @@ enum Alignment: sbyte
     Right = 1
 }
 ```
-上面的示例所示，枚举成员的声明可以包括指定成员的值的常量表达式。 每个枚举成员的常量值必须是枚举的基础类型范围内。 当枚举成员的声明不显式指定一个值时，该成员提供的值为零 （如果它是枚举类型中的第一个成员） 或原文前的枚举成员加上一个值。
+As shown by the previous example, an enum member declaration can include a constant expression that specifies the value of the member. The constant value for each enum member must be in the range of the underlying type of the enum. When an enum member declaration does not explicitly specify a value, the member is given the value zero (if it is the first member in the enum type) or the value of the textually preceding enum member plus one.
 
-枚举值可以转换成整型值和使用类型强制转换，反之亦然。 例如
+Enum values can be converted to integral values and vice versa using type casts. For example
 
 ```csharp
 int i = (int)Color.Blue;        // int i = 2;
 Color c = (Color)2;             // Color c = Color.Blue;
 ```
-任何枚举类型的默认值是整数值转换为枚举类型的零。 在其中变量将自动初始化为默认值的情况下，这是枚举类型的变量指定的值。 为了使默认值的枚举类型可供方便使用，文本`0`隐式转换为任何枚举类型。 因此，可以运行以下命令。
+The default value of any enum type is the integral value zero converted to the enum type. In cases where variables are automatically initialized to a default value, this is the value given to variables of enum types. In order for the default value of an enum type to be easily available, the literal `0` implicitly converts to any enum type. Thus, the following is permitted.
 
 ```csharp
 Color c = 0;
 ```
 
-## <a name="delegates"></a>委托
+## <a name="delegates"></a>Delegates
 
-***委托类型***表示对具有特定参数列表和返回类型的方法的引用。 通过委托，可以将方法视为可分配给变量并可作为参数传递的实体。 委托类似于其他一些语言中的函数指针概念，但与函数指针不同的是，委托不仅面向对象，还类型安全。
+A ***delegate type*** represents references to methods with a particular parameter list and return type. Delegates make it possible to treat methods as entities that can be assigned to variables and passed as parameters. Delegates are similar to the concept of function pointers found in some other languages, but unlike function pointers, delegates are object-oriented and type-safe.
 
-下面的示例声明并使用 `Function` 委托类型。
+The following example declares and uses a delegate type named `Function`.
 
 ```csharp
 using System;
@@ -1554,22 +1546,22 @@ class Test
     }
 }
 ```
-`Function` 委托类型实例可以引用需要使用 `double` 自变量并返回 `double` 值的方法。 `Apply`方法将应用给定`Function`的元素`double[]`，使其返回`double[]`的结果。 在 `Main` 方法中，`Apply` 用于向 `double[]` 应用三个不同的函数。
+An instance of the `Function` delegate type can reference any method that takes a `double` argument and returns a `double` value. The `Apply` method applies a given `Function` to the elements of a `double[]`, returning a `double[]` with the results. In the `Main` method, `Apply` is used to apply three different functions to a `double[]`.
 
-委托可以引用静态方法（如上面示例中的 `Square` 或 `Math.Sin`）或实例方法（如上面示例中的 `m.Multiply`）。 引用实例方法的委托还会引用特定对象，通过委托调用实例方法时，该对象会变成调用中的 `this`。
+A delegate can reference either a static method (such as `Square` or `Math.Sin` in the previous example) or an instance method (such as `m.Multiply` in the previous example). A delegate that references an instance method also references a particular object, and when the instance method is invoked through the delegate, that object becomes `this` in the invocation.
 
-还可以使用匿名函数创建委托，这些函数是便捷创建的“内联方法”。 匿名函数可以查看周围方法的局部变量。 因此，上面的乘数示例可以编写更轻松地而无需使用`Multiplier`类：
+Delegates can also be created using anonymous functions, which are "inline methods" that are created on the fly. Anonymous functions can see the local variables of the surrounding methods. Thus, the multiplier example above can be written more easily without using a `Multiplier` class:
 
 ```csharp
 double[] doubles =  Apply(a, (double x) => x * 2.0);
 ```
-委托的一个有趣且有用的属性是，它不知道也不关心所引用的方法的类；只关心引用的方法是否具有与委托相同的参数和返回类型。
+An interesting and useful property of a delegate is that it does not know or care about the class of the method it references; all that matters is that the referenced method has the same parameters and return type as the delegate.
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>Attributes
 
-C# 程序中的类型、成员和其他实体支持使用修饰符来控制其行为的某些方面。 例如，方法的可访问性是由 `public`、`protected`、`internal` 和 `private` 修饰符控制。 C# 整合了这种能力，以便可以将用户定义类型的声明性信息附加到程序实体，并在运行时检索此类信息。 程序通过定义和使用***特性***来指定此类额外的声明性信息。
+Types, members, and other entities in a C# program support modifiers that control certain aspects of their behavior. For example, the accessibility of a method is controlled using the `public`, `protected`, `internal`, and `private` modifiers. C# generalizes this capability such that user-defined types of declarative information can be attached to program entities and retrieved at run-time. Programs specify this additional declarative information by defining and using ***attributes***.
 
-以下示例声明了 `HelpAttribute` 特性，可将其附加到程序实体，以提供指向关联文档的链接。
+The following example declares a `HelpAttribute` attribute that can be placed on program entities to provide links to their associated documentation.
 
 ```csharp
 using System;
@@ -1593,7 +1585,7 @@ public class HelpAttribute: Attribute
     }
 }
 ```
-所有特性类都派生`System.Attribute`.NET Framework 提供的基类。 特性的应用方式为，在相关声明前的方括号内指定特性的名称以及任意自变量。 如果属性的名称以结尾`Attribute`，可以省略该名称的一部分，该属性引用时。 例如，可按如下方法使用 `HelpAttribute` 特性。
+All attribute classes derive from the `System.Attribute` base class provided by the .NET Framework. Attributes can be applied by giving their name, along with any arguments, inside square brackets just before the associated declaration. If an attribute's name ends in `Attribute`, that part of the name can be omitted when the attribute is referenced. For example, the `HelpAttribute` attribute can be used as follows.
 
 ```csharp
 [Help("http://msdn.microsoft.com/.../MyClass.htm")]
@@ -1603,9 +1595,9 @@ public class Widget
     public void Display(string text) {}
 }
 ```
-此示例附加`HelpAttribute`到`Widget`类，另一个`HelpAttribute`到`Display`类中的方法。 特性类的公共构造函数控制了将特性附加到程序实体时必须提供的信息。 可以通过引用特性类的公共读写属性（如上面示例对 `Topic` 属性的引用），提供其他信息。
+This example attaches a `HelpAttribute` to the `Widget` class and another `HelpAttribute` to the `Display` method in the class. The public constructors of an attribute class control the information that must be provided when the attribute is attached to a program entity. Additional information can be provided by referencing public read-write properties of the attribute class (such as the reference to the `Topic` property previously).
 
-下面的示例演示如何在运行时检索给定的程序实体的属性信息使用反射。
+The following example shows how attribute information for a given program entity can be retrieved at run-time using reflection.
 
 ```csharp
 using System;
@@ -1631,4 +1623,4 @@ class Test
     }
 }
 ```
-通过反射请求获得特定特性时，将调用特性类的构造函数（由程序源提供信息），并返回生成的特性实例。 如果通过属性提供的其他信息，这些属性设置为给定的值之前返回的属性实例。这是测试
+When a particular attribute is requested through reflection, the constructor for the attribute class is invoked with the information provided in the program source, and the resulting attribute instance is returned. If additional information was provided through properties, those properties are set to the given values before the attribute instance is returned.This is test
