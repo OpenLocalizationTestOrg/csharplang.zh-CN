@@ -11,12 +11,12 @@ ms.author: kasparks
 no-loc:
 - Advisor
 - virtual machines
-ms.openlocfilehash: 0db56c3b5257b5a662aa40b79b1c5353cb882613
-ms.sourcegitcommit: 36bce7b2d33dec748fe380b3308db90082881fe3
+ms.openlocfilehash: fc67c442a7e94812a7f7b6c4a766deb6284fb405
+ms.sourcegitcommit: 24b22e1ceca07fd0f4ec0095a9ec26bc7731c8ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66757870"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826937"
 ---
 # <a name="reduce-service-costs-using-azure-opno-locadvisor"></a>降低服务成本使用 Azure Advisor
 
@@ -53,8 +53,10 @@ Advisor 标识不是当前关联到负载均衡器或虚拟机等 Azure 资源�
 1. 登录到[Azure 门户](https://portal.azure.com)，然后打开[ Advisor ](https://aka.ms/azureadvisordashboard)。
 
 2.  上Advisor仪表板中，单击**成本**选项卡。
-:::no-loc Text="Test Review":::
-:::no-loc Text="This is Test String"::: 
+:::no-loc Text="Test Review":::This should be localized 123
+:::no-loc Text="This is Test String":::  This should be localized
+:::no-loc text="Test Review":::This should be localized 123 small t
+:::no-loc text="This is Test String":::  This should be localized small t
 ## <a name="next-steps"></a>后续步骤
 
 若要详细了解Advisor的建议，请参阅：
