@@ -15,8 +15,8 @@ ms.openlocfilehash: fc67c442a7e94812a7f7b6c4a766deb6284fb405
 ms.sourcegitcommit: 24b22e1ceca07fd0f4ec0095a9ec26bc7731c8ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826937"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "6605227"
 ---
 # <a name="reduce-service-costs-using-azure-opno-locadvisor"></a>降低服务成本使用 Azure Advisor
 
@@ -52,16 +52,12 @@ Advisor 标识不是当前关联到负载均衡器或虚拟机等 Azure 资源�
 
 1. 登录到[Azure 门户](https://portal.azure.com)，然后打开[ Advisor ](https://aka.ms/azureadvisordashboard)。
 
-2.  上Advisor仪表板中，单击**成本**选项卡。
-:::no-loc Text="Test Review":::This should be localized 123
-:::no-loc Text="This is Test String":::  This should be localized
-:::no-loc text="Test Review":::This should be localized 123 small t
-:::no-loc text="This is Test String":::  This should be localized small t
+2.  上Advisor仪表板中，单击**成本**选项卡。:::no-loc Text="Test Review":::这应该是本地化的 123:::no-loc Text="This is Test String":::这应本地化:::no-loc text="Test Review":::这应该是本地化 123 小型 t:::no-loc text="This is Test String":::这应该是本地化的小型 t
 ## <a name="next-steps"></a>后续步骤
 
 若要详细了解Advisor的建议，请参阅：
 * [简介 Advisor](advisor-overview.md)
-* [入门](advisor-get-started.md)
+* [开始](advisor-get-started.md)
 * [Advisor 性能建议](advisor-cost-recommendations.md)
 * [Advisor 高可用性建议](advisor-cost-recommendations.md)
 * [Advisor 安全建议](advisor-cost-recommendations.md)
