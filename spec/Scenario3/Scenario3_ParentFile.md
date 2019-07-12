@@ -1,15 +1,15 @@
 ---
-description: This is test for Scenario3
-ms.openlocfilehash: 91313f3fcf75e461da1c06e39e3da439a819264f
-ms.sourcegitcommit: 7fb8f684979b20e6ccf685a58aef9191899194ff
-ms.translationtype: HT
+description: 这是 Scenario3 的测试
+ms.openlocfilehash: eca7279c76127b2624eb6f0934d4ea99181d0f3f
+ms.sourcegitcommit: b1e4e5081fc05754e25ad3a57eca0e2dc91e6a7f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67665774"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67723324"
 ---
-# <a name="parent-file"></a>Parent File
+# <a name="parent-filever-3"></a>父文件 (ver 3)
 
-Include File 1 [!include[](./includes/Scenario3_includeFile1.md)]
+包括文件 1 [!include[](./includes/Scenario3_includeFile1.md)]
 
 
-Include File 2 [!include[](./includes/Scenario3_includeFile2.md)]
+包括文件 2 [!include[](./includes/Scenario3_includeFile2.md)]

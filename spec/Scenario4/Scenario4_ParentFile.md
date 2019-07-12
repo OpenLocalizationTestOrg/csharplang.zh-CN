@@ -1,14 +1,14 @@
 ---
-description: This is test for Scenario4
-ms.openlocfilehash: a84def9e5d75fa570b955f137a40db2c16fed377
-ms.sourcegitcommit: 1c23cff10ae01ec4bf6f55d786d95dfb5573b24f
+description: 这是 Scenario4 的测试
+ms.openlocfilehash: 3c39e836ed419ff66ebb7017ee7b8ecf32e44df4
+ms.sourcegitcommit: 8611c6bbbea62e91db77d7951a4b21add340fc89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67673193"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717724"
 ---
-# <a name="parent-file"></a>Parent File
+# <a name="parent-file-ver3"></a>父文件 (ver3)
 
-Include File 1 [!include[](./includes/Scenario4_includeFile1.md)]
+包括文件 1 [!include[](./includes/Scenario4_includeFile1.md)]
 
-Include File 2 [!include[](./includes/Scenario4_includeFile2.md)]
+包括文件 2 [!include[](./includes/Scenario4_includeFile2.md)]

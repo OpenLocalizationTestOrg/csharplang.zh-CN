@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0e21bdcc85019d8e2cd0969c54ddff317e8b8420
-ms.sourcegitcommit: 6e154f38edea20866eb8366589e3bba26a265369
+ms.openlocfilehash: f6621168897a9c002892363166fb3784085bb4f7
+ms.sourcegitcommit: 8611c6bbbea62e91db77d7951a4b21add340fc89
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67665717"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717735"
 ---
-这是包含文件1 (更新至版本3)
+这是包含文件 1 (作为 ver2 update)
