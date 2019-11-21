@@ -1,5 +1,5 @@
 ---
-title: 降低服务成本使用 Azure 顾问 |Microsoft Docs
+title: 使用 Azure 顾问降低服务成本 |Microsoft Docs
 description: 使用 Azure 顾问优化 Azure 部署的成本。
 services: advisor
 documentationcenter: NA
@@ -8,60 +8,69 @@ ms.service: advisor
 ms.topic: article
 ms.date: 01/29/2019
 ms.author: kasparks
-ms.openlocfilehash: 0753d6123bd95fc0fb4820e85bab717603dfa163
-ms.sourcegitcommit: afdb017b6e7925572904f2d85d86352f95e336ab
-ms.translationtype: MT
+ms.openlocfilehash: 34031883ec432fce4dcdcd3e825c99e453a6c6e3
+ms.sourcegitcommit: 5aca2af2f2c521ae3f3e7fab640edda966edd007
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "6606363"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "6610196"
 ---
-# <a name="reduce-service-costs-using-azure-advisor"></a>降低服务成本使用 Azure 顾问
+![Test1noicon](./image/Test1noicon.png)
 
-顾问可帮助你优化并降低 Azure 总支出通过识别闲置和未充分利用资源。 你可以获取成本建议**成本**顾问仪表板上的选项卡。 这是测试 123。
+# <a name="reduce-service-costs-using-azure-advisor"></a>使用 Azure 顾问降低服务成本
 
-## <a name="optimize-virtual-machine-spend-by-resizing-or-shutting-down-underutilized-instances"></a>优化虚拟机花费通过调整或关闭未充分利用的实例 
+顾问通过识别空闲和未充分利用的资源，帮助你优化和减少总体 Azure 支出。 可以从顾问仪表板上的 "**成本**" 选项卡获取成本建议。 这是测试123。
 
-虽然某些应用程序方案会根据设计利用率较低，但通常可通过管理的大小和数量的虚拟机来降低成本。 顾问为 7 天内监视虚拟机使用情况，然后识别出利用率较低的虚拟机。 虚拟机被视为利用率较低的如果其 CPU 使用率为 5%或更少并且其网络利用率为小于 2%或当前工作负荷是否可以容纳的较小的虚拟机大小。这是无 loc 测试。
+## <a name="optimize-virtual-machine-spend-by-resizing-or-shutting-down-underutilized-instances"></a>通过调整大小或关闭未充分利用的实例来优化虚拟机花费 
 
-顾问会显示继续运行你的虚拟机，以便您可以选择将其关闭或重设其大小的估计的开销。
+虽然某些应用程序方案在设计上可能导致低利用率，但你通常可以通过管理虚拟机的大小和数量来节省资金。 Advisor 会监视你的虚拟机使用情况7天，然后标识低利用率虚拟机。 如果虚拟机的 CPU 利用率为5% 或更低，并且其网络利用率小于2%，或者当前工作负荷可由较小的虚拟机大小容纳，则会将虚拟机视为低利用率。这是不是就地测试。
 
-如果你想要加强对未充分利用的虚拟机的标识，可以调整平均 CPU 使用率规则基于每个订阅。
+顾问会显示继续运行虚拟机所需的估计成本，以便可以选择关闭虚拟机或调整其大小。
 
-## <a name="reduce-costs-by-eliminating-unprovisioned-expressroute-circuits"></a>通过消除未设置的 ExpressRoute 线路来降低成本
+如果你想要更积极地识别使用不足的虚拟机，你可以基于每个订阅调整平均 CPU 使用率规则。
 
-顾问可识别这些实例中的提供程序状态的 ExpressRoute 线路*未预配*为超过一个月，将建议删除该线路，如果你不打算使用的连接设置的线路提供程序。
+## <a name="reduce-costs-by-eliminating-unprovisioned-expressroute-circuits"></a>消除未设置的 ExpressRoute 线路，从而降低成本
 
-## <a name="reduce-costs-by-deleting-or-reconfiguring-idle-virtual-network-gateways"></a>通过删除或重新配置空闲虚拟网络网关降低成本
+顾问会确定提供程序状态为 "*未设置*" 的 ExpressRoute 线路超过一个月，如果不打算使用连接服务提供商来预配线路，则建议删除该线路。
 
-顾问标识已空闲时间超过 90 天的虚拟网络入口。 由于这些网关按小时计费，应考虑重新配置或删除它们，如果不想再使用它们。 
+## <a name="reduce-costs-by-deleting-or-reconfiguring-idle-virtual-network-gateways"></a>删除或重新配置空闲虚拟网络网关，降低成本
 
-## <a name="buy-reserved-virtual-machine-instances-to-save-money-over-pay-as-you-go-costs"></a>购买保留的虚拟机实例可节省即用即付成本
+顾问标识在超过90天内空闲的虚拟网络入口。 由于这些网关按小时计费，因此，如果不想再使用它们，则应考虑重新配置或删除它们。 
 
-顾问将过去的 30 天内查看虚拟机使用情况，并确定是否无法通过购买 Azure 预订节省资金。 顾问将显示的区域和大小可能具有的大多数节约和显示与购买的预订的估计的节约。 Azure 预订虚拟机可以预购买基本成本。 折扣将自动应用于新的或现有 Vm，为你保留项具有相同的大小和区域。 [了解 Azure 保留 VM 实例有关的详细信息。](https://azure.microsoft.com/pricing/reserved-vm-instances/)
+## <a name="buy-reserved-virtual-machine-instances-to-save-money-over-pay-as-you-go-costs"></a>购买保留虚拟机实例，通过即用即付成本节省资金
 
-顾问还会通知你的预订实例都可以将在接下来的 30 天后过期。 它将建议购买新的保留实例，以避免支付即用即付定价。
+Advisor 将在过去30天内检查虚拟机的使用情况，并确定是否可以通过购买 Azure 保留来节省资金。 顾问会向你显示最大限度地节省费用的区域和大小，并将向你显示购买预留的估计节省量。 借助 Azure 保留，你可以为虚拟机预先购买基本成本。 折扣将自动应用于与预留大小和区域相同的新的或现有的 Vm。 [详细了解 Azure 保留 VM 实例。](https://azure.microsoft.com/pricing/reserved-vm-instances/)
 
-## <a name="delete-unassociated-public-ip-addresses-to-save-money"></a>删除未关联的公共 IP 地址，以节省资金
+顾问还会通知你你的保留实例将在未来30天到期。 建议你购买新的预订实例，以避免支付即用即付定价。
 
-顾问标识不是当前关联到负载均衡器或虚拟机等 Azure 资源的公共 IP 地址。 这些公共 IP 地址有少许费用。 如果不打算使用它们，则删除它们可能导致节省成本。
+## <a name="delete-unassociated-public-ip-addresses-to-save-money"></a>删除未关联的公共 IP 地址以节省资金
+
+顾问标识当前不与 Azure 资源（例如负载均衡器或 Vm）关联的公共 IP 地址。 这些公共 IP 地址附带了一个名义费用。 如果你不打算使用它们，则删除它们可能会节省成本。
 
 ## <a name="how-to-access-cost-recommendations-in-azure-advisor"></a>如何访问 Azure 顾问中的成本建议
 
-1. 登录到[Azure 门户](https://portal.azure.com)，然后打开[顾问](https://aka.ms/azureadvisordashboard)。
-:::icon source="image\Test123.png":::这是图标源测试，这是测试下一行
+:::image type="complex"  alt-text="这是一个用于 contoso-scope1 的复杂映像测试功能" loc-scope="Azure" source="./Test.png"::: 
+这是针对 contoso-scope1 的复杂映像测试功能的日志说明，这是多行 testing1 :::image-end:::
 
-2.  在顾问仪表板，单击**成本**选项卡。这是:::no-loc text="TEST for inline lock":::以查看是否将删除或标记作为内联 loc 的"测试"。
+1. 登录到[Azure 门户](https://portal.azure.com)，然后打开[Advisor](https://aka.ms/azureadvisordashboard)。
+:::icon source="image\Test123.png":::这是图标源测试，这是下一行的测试
 
-:::image source="https://portal.azure.com" alt-text="这是映像源测试":::
-TLong 说明开始。顾问标识不是当前关联到负载均衡器或虚拟机等 Azure 资源的公共 IP 地址。 这些公共 IP 地址有少许费用。 如果不打算使用它们，则删除它们可能导致节省成本。
-详细说明最终:::image-end:::这是映像结束
+2.  在顾问仪表板上，单击 "**成本**" 选项卡。这是一个 :::no-loc text="TEST for inline lock":::，用于查看是否将删除 "测试内联位置" 或将其作为标记进行放置。
 
-::: image source= "./Test.png" alt-test="space teating":::
+:::image source="https://portal.azure.com" alt-text="这是图像源测试":::
+TLong 说明开始。顾问标识当前不与 Azure 资源（例如负载均衡器或 Vm）关联的公共 IP 地址。 这些公共 IP 地址附带了一个名义费用。 如果你不打算使用它们，则删除它们可能会节省成本。
+长说明结束 :::image-end:::这是图像结束
+
+::: image source= "./image/Test1noicon.png" alt-text="space teating":::
+
+:::image type="complex" source="./image/Test1noicon.png" alt-text="这是一个用于 contoso-scope2 的复杂映像测试功能" loc-scope="Azure"::: 
+这是针对 contoso-scope2 的复杂映像测试功能的日志说明，这是多行 testing2 :::image-end:::
+
 ## <a name="next-steps"></a>后续步骤
 
 若要了解有关顾问建议的详细信息，请参阅：
-* [顾问简介](advisor-overview.md)
-* [开始](advisor-get-started.md)
+* [Advisor 简介](advisor-overview.md)
+* [入门](advisor-get-started.md)
 * [顾问性能建议](advisor-cost-recommendations.md)
 * [顾问高可用性建议](advisor-cost-recommendations.md)
-* [顾问安全性建议](advisor-cost-recommendations.md)
+* [顾问安全建议](advisor-cost-recommendations.md)
