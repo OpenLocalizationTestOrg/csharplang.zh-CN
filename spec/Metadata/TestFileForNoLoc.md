@@ -8,12 +8,12 @@ ms.service: advisor
 ms.topic: article
 ms.date: 01/29/2019
 ms.author: kasparks
-ms.openlocfilehash: 34031883ec432fce4dcdcd3e825c99e453a6c6e3
-ms.sourcegitcommit: 5aca2af2f2c521ae3f3e7fab640edda966edd007
-ms.translationtype: HT
+ms.openlocfilehash: c8b5f84541bce641b60b5e0c55a8c701850b57f0
+ms.sourcegitcommit: 5eac2b357ddc023f87e520e04cafde87796ee319
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "6610196"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "6610234"
 ---
 ![Test1noicon](./image/Test1noicon.png)
 
@@ -49,8 +49,8 @@ Advisor 将在过去30天内检查虚拟机的使用情况，并确定是否可�
 
 ## <a name="how-to-access-cost-recommendations-in-azure-advisor"></a>如何访问 Azure 顾问中的成本建议
 
-:::image type="complex"  alt-text="这是一个用于 contoso-scope1 的复杂映像测试功能" loc-scope="Azure" source="./Test.png"::: 
-这是针对 contoso-scope1 的复杂映像测试功能的日志说明，这是多行 testing1 :::image-end:::
+:::image type="complex"  alt-text="这是一个复杂的图像测试功能，适用于图像 SxS 行为" source="./image/Test1noicon.png"::: 
+这是针对 SxS 的复杂映像测试功能的日志说明，这是 SxS 多行 testing1 :::image-end:::
 
 1. 登录到[Azure 门户](https://portal.azure.com)，然后打开[Advisor](https://aka.ms/azureadvisordashboard)。
 :::icon source="image\Test123.png":::这是图标源测试，这是下一行的测试
