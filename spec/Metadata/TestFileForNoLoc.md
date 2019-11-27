@@ -8,12 +8,12 @@ ms.service: advisor
 ms.topic: article
 ms.date: 01/29/2019
 ms.author: kasparks
-ms.openlocfilehash: c8b5f84541bce641b60b5e0c55a8c701850b57f0
-ms.sourcegitcommit: 5eac2b357ddc023f87e520e04cafde87796ee319
+ms.openlocfilehash: bed9d9cb74ef6f628c6d471b5b41c0ee04d18f16
+ms.sourcegitcommit: 865c81e9bd3c5772a5a3cdcc5b8460cc1f1a8b57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "6610234"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "6610346"
 ---
 ![Test1noicon](./image/Test1noicon.png)
 
@@ -49,7 +49,7 @@ Advisor 将在过去30天内检查虚拟机的使用情况，并确定是否可�
 
 ## <a name="how-to-access-cost-recommendations-in-azure-advisor"></a>如何访问 Azure 顾问中的成本建议
 
-:::image type="complex"  alt-text="这是一个复杂的图像测试功能，适用于图像 SxS 行为" source="./image/Test1noicon.png"::: 
+:::image type="complex"  alt-text="这是一个复杂的图像测试功能，适用于图像 SxS 行为" source="./image/feedback-tool.png"::: 
 这是针对 SxS 的复杂映像测试功能的日志说明，这是 SxS 多行 testing1 :::image-end:::
 
 1. 登录到[Azure 门户](https://portal.azure.com)，然后打开[Advisor](https://aka.ms/azureadvisordashboard)。
@@ -63,7 +63,7 @@ TLong 说明开始。顾问标识当前不与 Azure 资源（例如负载均衡�
 
 ::: image source= "./image/Test1noicon.png" alt-text="space teating":::
 
-:::image type="complex" source="./image/Test1noicon.png" alt-text="这是一个用于 contoso-scope2 的复杂映像测试功能" loc-scope="Azure"::: 
+:::image type="complex" source="./image/feedback-tool.png" alt-text="这是一个用于 contoso-scope2 的复杂映像测试功能" loc-scope="Azure"::: 
 这是针对 contoso-scope2 的复杂映像测试功能的日志说明，这是多行 testing2 :::image-end:::
 
 ## <a name="next-steps"></a>后续步骤
